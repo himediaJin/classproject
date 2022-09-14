@@ -14,7 +14,7 @@ public class CharTypeOperator {
 		System.out.println(c1++);  // 66 출력 c1 = 67
 		System.out.println(++c1);  // 68 출력 c1 = 68 
 		
-		
+		// 
 	}
 
 }

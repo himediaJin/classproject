@@ -1,0 +1,15 @@
+package first;
+
+import java.util.Scanner;
+
+public class ScannerTest {
+
+	public static void main(String[] args) {
+		
+		
+		//java.util.Scanner in = new java.util.Scanner(System.in);
+		Scanner in;
+
+	}
+
+}

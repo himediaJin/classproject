@@ -1,0 +1,12 @@
+package first;
+
+public class Member {
+	
+	public static void main(String[] args) {
+		
+	}
+	
+	// 자기 자신의 이름을 출력하는 메소드
+	// 반환타입, 매개변수, 처리내용
+
+}

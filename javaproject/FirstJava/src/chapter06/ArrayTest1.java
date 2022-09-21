@@ -24,7 +24,7 @@ public class ArrayTest1 {
 		// index=> 0~9
 		for(int i=0; i<korScore.length ; i++) {
 			int temp = korScore[i];
-			//System.out.println(i + " : " + temp);
+			System.out.println(i + " : " + temp);
 		}
 		
 		// 배열 요소의 초기화

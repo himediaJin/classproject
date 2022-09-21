@@ -31,16 +31,6 @@ public class ArrayTest2 {
 			System.out.println(arr2[i]); // arr2[6]
 		}
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
 	}
 
 }

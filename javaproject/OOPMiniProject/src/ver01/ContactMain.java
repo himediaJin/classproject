@@ -37,8 +37,13 @@ public class ContactMain {
 		
 		///////////////////////////////////
 		while(true) {
+			System.out.println();
+			System.out.println();
 			System.out.println("1. 입력 시작 | 0. 종료");
 			String select = in.nextLine();
+			
+			
+			// 사용자 요청에 따라 프로그램 종료/진행 => 분기
 			if(select.equals("0")) {
 				System.out.println("프로그램을 종료합니다.");
 				break;
@@ -48,6 +53,29 @@ public class ContactMain {
 			}
 			
 			System.out.println("데이터 입력을 시작합니다.");
+			
+			System.out.print("이름 >>> ");
+			String name = in.nextLine();
+			
+			System.out.print("전화번호 >>> ");
+			String phoneNumber = in.nextLine();
+
+			System.out.print("이메일 >>> ");
+			String email = in.nextLine();
+
+			System.out.print("주소 >>> ");
+			String address = in.nextLine();
+
+			System.out.print("생일 >>> ");
+			String birthday = in.nextLine();
+
+			System.out.print("그룹 >>> ");
+			String group = in.nextLine();
+			
+			Contact c = new Contact(name, phoneNumber, email, address, birthday, group);
+			
+			c.printInfo();
+			
 		}
 		
 		

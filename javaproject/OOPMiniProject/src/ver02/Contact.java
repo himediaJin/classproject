@@ -1,4 +1,4 @@
-package ver01;
+package ver02;
 
 // Contact 클래스의 용도 ? => 데이터저장
 // 인스턴스 생성 -> 변수의 메모리 생성 -> 데이터 저장
@@ -105,7 +105,11 @@ class Contact {
 		
 	
 	
-	
+	public static void main(String[] args) {
+		
+		Contact contact = new Contact();
+		
+	}
 	
 	
 	

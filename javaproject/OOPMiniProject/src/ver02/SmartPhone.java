@@ -45,6 +45,41 @@ public class SmartPhone {
 	//                 저장된 데이터의 리스트를 출력하는 메소드를 정의합니다.
 	
 	
+	// 삭제 ( 이름 으로 검색 ),
+	void deleteContact() {
+		
+		// 검색어 받기
+		System.out.println("데이터 삭제가 진행됩니다.");
+		System.out.print("삭제하고자 하는 이름을 입력해주세요 >");
+		String name = sc.nextLine();
+		
+		// 삭제하고자 하는 index 찾아야한다! -> 시프트 
+		int searchIndex = -1;	// 현재 검색의 결과는 없다!
+		
+		// 데이터 찾기
+		for(int i=0; i<numOfContact; i++) {
+			if(contacts[i].getName().equals(name)) {
+				searchIndex = i;
+				break;
+			}
+		}
+		
+		// 검색한 index 값으로 분기 : 시프트를 하거나 검색 결과 이름이 존재하지 않는다!
+		if(searchIndex<0) {
+			System.out.println("삭제하고자하는 이름의 데이터가 존재하지않습니다.");
+		} else {
+			for(int i=searchIndex ; i<numOfContact-1; i++) {
+				contacts[i] = contacts[i+1];
+			}
+			
+			numOfContact--;
+			System.out.println("데이터가 삭제되었습니다.");
+		}
+		 
+		
+	}
+	
+	
 	// 검색 후 결과 출력 ( 이름 으로 검색 )
 	void searchInfoPrint() {
 		
@@ -53,7 +88,33 @@ public class SmartPhone {
 		// 2. 배열에서 이름 검색
 		// 3. 결과 출력 : "검색한 이름의 정보가 없습니다."
 		
-		Scanner sc = new Scanner(System.in);
+		String name = null;	// 검색할 이름
+		
+		System.out.println("검색을 시작합니다.");
+		System.out.print("검색할 이름을 입력하세요. >");
+		name = sc.nextLine();
+		
+		Contact contact = null;
+		
+		// 배열에서 검색할 이름을 가지는 인스턴스의 데이터 출력 메소드를 실행
+		for(int i=0; i<numOfContact ; i++) {
+			// 각 요소의 참조변수로 객체를 참조해서 이름을 비교
+			if(contacts[i].getName().equals(name)) {
+				contact = contacts[i];
+				break;
+			}
+		}
+		
+		
+		// 3. 결과 출력 : "검색한 이름의 정보가 없습니다."
+		System.out.println("검색의 결과 ===============");
+		if(contact == null) {
+			System.out.println("검색한 이름 " + name + " 의 정보가 없습니다.");
+		} else {
+			contact.printInfo();
+		}
+		
+		
 		
 		
 		
@@ -63,6 +124,12 @@ public class SmartPhone {
 	// 전체 입력 데이터의 출력
 	void printAllData() {
 		// 배열에 저장된 데이터를 모두 출력
+		
+		if(numOfContact==0) {
+			System.out.println("입력된 정보가 없습니다.");
+			return;
+		}
+		
 		for(int i=0; i<numOfContact; i++) {
 			contacts[i].printInfo();
 		}
@@ -76,7 +143,10 @@ public class SmartPhone {
 		// 2. 인스턴스 생성
 		// 3. 배열에 인스턴스의 참조값을 저장
 		
-		
+		if(numOfContact==contacts.length) {
+			System.out.println("최대 저장 개수는 " + contacts + "개 입니다.");
+			return;
+		}
 		
 		String name = null;
 		String phoneNumber = null;

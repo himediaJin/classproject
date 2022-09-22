@@ -6,14 +6,24 @@ public class SmartPhoneMain {
 		
 		SmartPhone smartPhone = SmartPhone.getInstance();
 		
-		
-		
 		// 입력
 		smartPhone.insertContact();
 		
 		// 전체 출력
 		smartPhone.printAllData();
+		
+		// 이름 검색후 결과 출력
+		smartPhone.searchInfoPrint();
 
 	}
 
 }
+
+
+
+
+
+
+
+
+

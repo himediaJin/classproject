@@ -45,6 +45,106 @@ public class SmartPhone {
 	//                 저장된 데이터의 리스트를 출력하는 메소드를 정의합니다.
 	
 	
+	// 이름 검색후 데이터 수정
+	void editContact() {
+		
+		// 검색어 받기
+		System.out.println("데이터 수정이 진행됩니다.");
+		System.out.print("수정하고자 하는 이름을 입력해주세요 >");
+		String name = sc.nextLine();
+		
+		// 삭제하고자 하는 index 찾아야한다! -> 시프트 
+		int searchIndex = -1;	// 현재 검색의 결과는 없다!
+		
+		// 데이터 찾기
+		for(int i=0; i<numOfContact; i++) {
+			if(contacts[i].getName().equals(name)) {
+				searchIndex = i;
+				break;
+			}
+		}
+		
+		if(searchIndex<0) {
+			System.out.println("찾으시는 데이터가 존재하지않습니다.");
+			return;
+		}
+		
+		Contact contact = contacts[searchIndex];
+		
+		System.out.println("데이터 수정을 진행합니다.");
+		
+		System.out.println(
+				"변경하고자하는 이름을 입력해주세요.(현재값: "+contact.getName()+")\n" 
+				+ "변경하지않으려면 엔터를치세요 >");
+		String newName = sc.nextLine();
+		
+		// "  abc  " -> "abc"
+		// " "
+		if(newName != null && newName.trim().length()>0) {
+			contact.setName(newName);
+		}
+		
+		System.out.println(
+				"변경하고자하는 전화번호를 입력해주세요.(현재값: "+contact.getPhoneNumber()+")\n" 
+				+ "변경하지않으려면 엔터를치세요 >");
+		String newPhoneNumber = sc.nextLine();
+		if(newPhoneNumber!=null && newPhoneNumber.trim().length()>0) {
+			contact.setPhoneNumber(newPhoneNumber);
+		}
+		
+		System.out.println(
+				"변경하고자하는 이메일을 입력해주세요.(현재값: "+contact.getEmail()+")\n" 
+				+ "변경하지않으려면 엔터를치세요 >");
+		String newEmail = sc.nextLine();
+		if(newEmail!=null && newEmail.trim().length()>0) {
+			contact.setEmail(newEmail);
+		}
+		
+		System.out.println(
+				"변경하고자하는 주소를 입력해주세요.(현재값: "+contact.getAddress()+")\n" 
+				+ "변경하지않으려면 엔터를치세요 >");
+		String newAddress = sc.nextLine();
+		if(newAddress!=null && newAddress.trim().length()>0) {
+			contact.setAddress(newAddress);
+		}
+
+		System.out.println(
+				"변경하고자하는 생일을 입력해주세요.(현재값: "+contact.getBirthday()+")\n" 
+				+ "변경하지않으려면 엔터를치세요 >");
+		String newBirthday = sc.nextLine();
+		if(newBirthday!=null && newBirthday.trim().length()>0) {
+			contact.setBirthday(newBirthday);
+		}
+
+		System.out.println(
+				"변경하고자하는 그룹을 입력해주세요.(현재값: "+contact.getGroup()+")\n" 
+				+ "변경하지않으려면 엔터를치세요 >");
+		String newGroup = sc.nextLine();
+		if(newGroup!=null && newGroup.trim().length()>0) {
+			contact.setGroup(newGroup);
+		}
+		
+		System.out.println("정보가 수정되었습니다.");
+		System.out.println();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
 	// 삭제 ( 이름 으로 검색 ),
 	void deleteContact() {
 		
@@ -79,7 +179,6 @@ public class SmartPhone {
 		
 	}
 	
-	
 	// 검색 후 결과 출력 ( 이름 으로 검색 )
 	void searchInfoPrint() {
 		
@@ -113,17 +212,13 @@ public class SmartPhone {
 		} else {
 			contact.printInfo();
 		}
-		
-		
-		
-		
-		
 	}
-	
 	
 	// 전체 입력 데이터의 출력
 	void printAllData() {
 		// 배열에 저장된 데이터를 모두 출력
+		
+		System.out.println("전체 데이터를 출력합니다. ==============");
 		
 		if(numOfContact==0) {
 			System.out.println("입력된 정보가 없습니다.");
@@ -135,8 +230,7 @@ public class SmartPhone {
 		}
 	}
 	
-	
-	
+	// 친구정보 입력
 	void insertContact() {
 		// 배열에 인스턴스를 저장하고, 
 		// 1. 데이터 받고

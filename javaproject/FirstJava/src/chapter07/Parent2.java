@@ -23,7 +23,8 @@ class Child2 extends Parent2{
 		System.out.println("상위 클래스에서 정의한 num : " + super.num);
 		System.out.println("현재 인스턴스에서 정의한 num : " + this.num);
 		System.out.println("메소드의 매개변수에서 정의한 num : " + num);
-		super.printNumber();
+		//super.printNumber();
+		printNumber();
 	}
 	
 	

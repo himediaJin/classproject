@@ -8,7 +8,7 @@ public class ClassTest {
 	
 	public static void main(String[] args) throws ClassNotFoundException {
 		
-		Class userClass = Class.forName("chapter09.User");
+		Class userClass = Class.forName("chapter01.User");
 		
 		// 변수, 메소드, 생성자
 		

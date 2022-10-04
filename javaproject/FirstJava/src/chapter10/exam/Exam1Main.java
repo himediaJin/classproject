@@ -29,7 +29,7 @@ public class Exam1Main {
 		// 영문자만 -> ^[a-zA-Z]*$
 		// 한글만  -> ^[가-힣]*$ 
 		// 영어+숫자 -> ^[a-z0-9A-Z]*$
-		// 이메일 :  ^[a-zA-Z0-9]+@+[a-zA-Z0-9]\.+[a-zA-Z]+$                  qqq@namver.com
+		// 이메일 :  ^[a-zA-Z0-9]+@+[a-zA-Z0-9]+\.+[a-zA-Z]+$                  qqq@namver.com
 		// 핸드폰 번호 : ^\d{3}-\d{4}-\d{4}+$
 		
 		// ? : 앞의 문자가 하나이거나 없거나
@@ -39,6 +39,7 @@ public class Exam1Main {
 		// \d : [0-9]
 		// \n \t
 		System.out.println(Pattern.matches("^\\d{3,4}-\\d{4}-\\d{4}+$", "010-9999-9999"));
+		System.out.println(Pattern.matches("^[a-z]+@+[a-z]+\\.+[a-zA-Z]+$", "aa@gmail.com"));
 		
 	}
 

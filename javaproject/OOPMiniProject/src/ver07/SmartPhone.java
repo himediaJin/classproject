@@ -20,7 +20,7 @@ public class SmartPhone {
 
 	//private Contact[] contacts;
 	//private int numOfContact; // 입력된 정보의 개수, 배열의 index 값으로 사용
-	List<Contact> contacts;
+	private List<Contact> contacts;
 	Scanner sc;
 
 	private SmartPhone() {

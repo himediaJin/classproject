@@ -115,6 +115,11 @@ select
     to_number('20,000', '999,999') - to_number('10,000', '999,999')
 from dual;
 
+select 
+    to_char(sal*1500, '999,999,999,999'),
+    to_number(to_char(sal*1500, '999,999,999,999'), '999,999,999,999')
+from emp;
+
 
 -- dcode 함수 => 여러가지 비교를 통해 결과 출력 switch-case 유사
 select
@@ -217,9 +222,10 @@ having max(Sal) >= 2900
 ;
 
 -- 직급별
-select job, count(*)
+select job, deptno, count(*) as cnt, trunc(avg(sal))
 from emp
-group by job
+group by job, deptno
+order by 2
 ;
 
 

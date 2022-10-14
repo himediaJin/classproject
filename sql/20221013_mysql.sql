@@ -79,4 +79,4 @@ select last_day(now()) from dual;
 -- %d => DD
 -- %i => minute
 select str_to_date('20220517', '%Y%m%d') from dual;
-select date_format(now(), '%Y. %m. %d. %H:%i:%s') from dual;
+select now(), date_format(now(), '%Y. %m. %d. %H:%i:%s') from dual;

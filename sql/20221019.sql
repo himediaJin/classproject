@@ -110,4 +110,9 @@ select * from dept;
 desc dept;
 commit;
 
-insert into dept values ('');
+insert into dept values (50, '개발', '서울');
+
+
+
+
+rollback;

@@ -1,5 +1,6 @@
-package dept;
+package dept.controller;
 
+import dept.Main;
 import dept.domain.Dept;
 import dept.service.SelectByService;
 

@@ -33,6 +33,7 @@ public class Main {
 				controller.delete();
 				break;
 			case 6:
+				controller.exit();
 				
 			}
 			

@@ -13,6 +13,29 @@ public class Main {
 			
 			menu();
 			
+			System.out.println("메뉴를 입력하세요. >>");
+			int select = Integer.parseInt(sc.nextLine());
+			
+			switch(select) {
+			case 1:
+				controller.select();
+				break;
+			case 2:
+				controller.selectByDeptno();
+				break;
+			case 3:
+				controller.insert();
+				break;
+			case 4:
+				controller.update();
+				break;
+			case 5:
+				controller.delete();
+				break;
+			case 6:
+				
+			}
+			
 			
 		}
 		

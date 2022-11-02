@@ -37,9 +37,9 @@
         console.log('num1', num1)
         console.log('num2', num2)
 
-        console.log(!num1 || !num2)
+        console.log('num1 == undefined || num2 == undefined', num1 == undefined || num2 == undefined)
 
-        if(!num1 || !num2){
+        if(num1 == undefined || num2 == undefined ){
             console.log('연산 불가')
         }
 
@@ -96,6 +96,37 @@
 
     fn4(arr2)
     fn4(...arr2)
+/* 
+    –매개변수로 시급과 시간을 입력받아 급여를 계산하는 함수를 만들어 봅시다
+    •함수 이름: earnings
+    •매개변수: name(이름), wage(시급), hours(시간)
+    •함수의 역할: 이름, 시급, 시간을 출력하고, 
+                시급과 시간을 곱한 최종 급여 출력
+    •만약 wage와 hours를 입력하지 않고 실행하면 
+            wage에 최저 임금이 들어가고, 
+            hours에 법정근로시간 1주일 40시간이 기본 매개변수로 입력
+ */
+
+    function earnings(name, wage=11000, hours=40){
+
+        // wage = wage || 11000;
+
+        console.log('')
+        console.log(`${name} 님의 급여 상세 ======`)
+        console.log(`시급 : ${wage} 원`)
+        console.log(`근무 시간 : ${hours} 시간`)
+        console.log(`급여 총액 : ${wage*hours}`)
+    }
+
+    earnings('KING', 12000, 80)
+    earnings('SCOTT', 11000)
+    earnings('SMITH')
+
+
+
+
+
+
 
 </script>
 

@@ -26,8 +26,8 @@
 
             h1.style.backgroundColor = 'blue'
             h1.style.color = 'yellow'
-            h1.style.padding = '10px'
-            h1.style.margin = '20px;'
+            h1.style.padding = '10'
+            h1.style.margin = '20'
             h1.style.fontSize = 'small'
 
             /////////////////////////////////
@@ -60,14 +60,54 @@
             let index = link.getAttribute('link-index')
             console.log('index', index)
 
+
+            // 동적 요소 생성 -> 추가
+            let newElement = document.createElement('h2')
+            newElement.textContent = '동적으로 생성한 h2 태그'
+            newElement.style.backgroundColor = 'black'
+            newElement.style.color = 'yellow'
+            newElement.style.height = '100px'
+            //newElement.setAttribute('height', '100')
+
+            // target : 부모 태그 캐스팅
+            let wrap = document.querySelector('#wrap')
+
+            wrap.appendChild(newElement)
+
+            let newImg = document.createElement('img')
+            newImg.setAttribute('src', '../css3/img/mini3.png')
+            newImg.setAttribute('width', '200')
+
+            wrap.appendChild(newImg)
+
+            let body = document.body
+            let removeTarget = document.querySelector('h3')
+
+            body.removeChild(removeTarget)
+
+
+            
+
+
         });
-        
+
+ 
 
         
 
     </script>
 </head>
 <body>
+
+
+
+
+    <h3>문서객체 조작</h3>
+
+    <div id="wrap"></div>
+
+
+    <hr>
 
 
     <h2><a href="https://www.naver.com">네이버???</a></h2>

@@ -1,0 +1,7 @@
+
+- 이클립스 설정
+
+1. jdk 설치 : 17
+2. Tomcat 다운로드 -> 압축풀기 -> 이클립스 Server Environment 설정 ( bin 폴더를 포함하는 경로 )
+3. src > main > webapp > jsp, html, css, js... 파일 자원 작성
+    src > main > webapp > WEB-INF > web.xml ( 현재 프로젝트의 설정 )

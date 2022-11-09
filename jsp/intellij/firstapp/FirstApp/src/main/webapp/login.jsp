@@ -1,3 +1,4 @@
+<%@ page import="java.time.LocalDate" %>
 <%--
   Created by IntelliJ IDEA.
   User: cheoho-hi
@@ -12,5 +13,23 @@
 </head>
 <body>
   <h1>로그인 페이지</h1>
+    <%
+
+        String userid = request.getParameter("userid");
+        String pw = request.getParameter("pw");
+
+        if(userid.equals(pw)){
+
+            session.setAttribute("loginId", userid);
+
+            response.sendRedirect("mypage.jsp");
+
+        } else {
+            response.sendRedirect("login.html");
+        }
+
+        LocalDate now = LocalDate.now();
+    %>
+    <%= now%>
 </body>
 </html>

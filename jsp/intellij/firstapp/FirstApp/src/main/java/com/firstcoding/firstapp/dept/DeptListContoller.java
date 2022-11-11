@@ -1,5 +1,7 @@
 package com.firstcoding.firstapp.dept;
 
+import lombok.extern.log4j.Log4j2;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -7,14 +9,17 @@ import java.io.IOException;
 import java.util.List;
 
 @WebServlet(name = "DeptListContoller", value = "/dept/list")
+@Log4j2
 public class DeptListContoller extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        log.info("Dept List Get ...");
+
         DeptService service = new DeptService();
 
-        System.out.println("Dept List Get ...");
+        //System.out.println("Dept List Get ...");
 
         List<Dept> list = null;
 

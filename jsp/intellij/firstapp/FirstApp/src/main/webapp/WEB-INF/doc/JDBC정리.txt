@@ -1,0 +1,29 @@
+
+1.  gradle 에 필요한 라이브러리 등록
+    
+     - JSTL 
+     - DB : mysql connector
+     - connection pool : hikariCP
+     - Lombok :  Lombok Project
+     - Log4j2 : core / api / slf4j 
+
+2. MVC  패턴 으로 클래스 구성
+    - Controller : Servlet 클래스로 사용자 요청 URI 등록, View 지정, 결과 데이터 공유
+    - Service : 목정에 맞는 결과 데이터 생성, 필요에 따라 DAO 클래스 사용
+    - DAO : 필요한 데이터베이스 처리 코드들, CRUD
+    - DTO/VO : Beans 형식의 데이터 저장을 목적으로 하는 클래스, 테이터 전달 공유 목적.
+
+------------------------------------------------------------------------------------------------------
+
+Todo
+
+
+
+
+
+
+
+
+
+
+

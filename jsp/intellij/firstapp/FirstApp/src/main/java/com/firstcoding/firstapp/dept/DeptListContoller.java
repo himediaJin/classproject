@@ -21,7 +21,7 @@ public class DeptListContoller extends HttpServlet {
 
         //System.out.println("Dept List Get ...");
 
-        List<Dept> list = null;
+        List<Dept> list = null; //
 
         try {
             list = service.getList();

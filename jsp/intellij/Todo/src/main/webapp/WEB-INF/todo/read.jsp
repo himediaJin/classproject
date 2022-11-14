@@ -39,9 +39,5 @@
 
     <a href="/todo/modify?tno=${param.tno}">Modify/Remove</a> <a href="/todo/list">Todo List</a>
 
-
-
-
-
 </body>
 </html>

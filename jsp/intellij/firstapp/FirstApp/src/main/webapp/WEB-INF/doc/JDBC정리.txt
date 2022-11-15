@@ -17,6 +17,23 @@
 
 Todo
 
+1. 데이터베이스 생성
+     테이블 생성
+     SQL 작성 : select(list), insert, select(read), update, delete
+
+2. 프로젝트 생성 , 설정
+    
+    gradle 설정 ( jdbc 관련 )
+
+3. MVC 형태의 클래스 구성
+    0 DTO
+    1 리스트 출력 페이지 : controller, Service, Dao
+    2 등록 페이지 	   : controller, Service, Dao
+    3 상세보기 페이지 	   : controller, Service, Dao
+    4 수정 페이지 	   : controller, Service, Dao
+    5 삭제 기능 	   : controller, Service, Dao
+
+
 
 
 

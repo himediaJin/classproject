@@ -28,9 +28,9 @@
         <td>완료여부</td>
     </tr>
 
-    <c:forEach var="todo" items="${todoList}">
+    <c:forEach var="todo" items="${todoList}" varStatus="stat">
     <tr>
-        <td>${todo.tno}</td>
+        <td>${todo.tno} / ${stat.count}</td>
         <td><a href="/todo/read?tno=${todo.tno}">${todo.todo}</a></td>
         <td>${todo.dueDate}</td>
         <td>${todo.finished ? '완료' : '진행중'}</td>

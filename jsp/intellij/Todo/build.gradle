@@ -48,6 +48,9 @@ dependencies {
     // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl
     testImplementation group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.19.0'
 
+    testCompileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
+    testAnnotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
+
 
 }
 

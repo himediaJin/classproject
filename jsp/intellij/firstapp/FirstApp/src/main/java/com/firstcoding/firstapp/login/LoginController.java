@@ -73,11 +73,14 @@ public class LoginController extends HttpServlet {
             // rememberMe 값이 on 이면 -> 회원 DB => uuid 업데이트!!!!
 
             if(rememberMe != null && rememberMe.equals("on")) {
+
+
                 // Cookie 저장, DB Update
                 UUID uuid = UUID.randomUUID();
-                Cookie c = new Cookie("uuid", uuid.toString());
-                c.setMaxAge(60 * 60 * 24 * 30);
-                response.addCookie(c);
+                Cookie c1 = new Cookie("uuid", uuid.toString());
+                c1.setMaxAge(60 * 60 * 24 * 30);
+                c1.setPath("/");
+                response.addCookie(c1);
 
                 // 로그인한 사용자의 uuid 업데이트
                 MemberService.getInstance().updateUUID(member.getIdx(), uuid.toString());

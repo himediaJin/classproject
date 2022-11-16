@@ -1,6 +1,5 @@
 package org.example.di.main;
 
-import org.example.di.assembler.Assembler;
 import org.example.di.domain.RegisterRequest;
 import org.example.di.exception.AlreadyExistingMemberException;
 import org.example.di.exception.IdPasswordNotMatchingException;
@@ -14,7 +13,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class MainForSpring {
+public class MainForSpring3 {
 
     //private static Assembler assembler = new Assembler();
 
@@ -23,7 +22,7 @@ public class MainForSpring {
     public static void main(String[] args) throws IOException {
 
         //ctx = new GenericXmlApplicationContext("classpath:appCtx.xml");
-        ctx = new GenericXmlApplicationContext("classpath:appCtx1.xml");
+        ctx = new GenericXmlApplicationContext("classpath:appCtx4.xml");
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
@@ -59,9 +58,7 @@ public class MainForSpring {
             return;
         }
 
-
-
-        MemberRegisterService2 service = ctx.getBean("memberregSvc", MemberRegisterService2.class);
+        MemberRegisterService service = ctx.getBean("memberRegisterService", MemberRegisterService.class);
 
         RegisterRequest request = new RegisterRequest();
         request.setEmail(args[1]);
@@ -93,7 +90,7 @@ public class MainForSpring {
             return;
         }
 
-        ChangePasswordService service = ctx.getBean("memberPwSvc", ChangePasswordService.class);
+        ChangePasswordService service = ctx.getBean("changePasswordService", ChangePasswordService.class);
 
         try {
             service.changePassword(args[1], args[2], args[3]);

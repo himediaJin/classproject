@@ -8,7 +8,7 @@
 	<bean id="daoImpl" class="org.example.di.dao.DaoImpl"/>
 
 	
-	<bean id="memberregSvc" class="org.example.di.service.MemberRegisterService">
+	<bean id="memberregSvc" class="org.example.di.service.MemberRegisterService"  >
         <constructor-arg>
 			<ref bean="memberDao"/>
 		</constructor-arg>

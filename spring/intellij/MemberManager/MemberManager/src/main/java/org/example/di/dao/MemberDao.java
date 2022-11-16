@@ -5,8 +5,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.example.di.domain.Member;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class MemberDao implements Dao {
+
+	// memberDao
 	
 	private static long nextId = 0;
 	private Map<String, Member> map = new HashMap<>();

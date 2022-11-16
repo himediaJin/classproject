@@ -12,25 +12,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class MemberRegisterService {
 
-	//@Autowired(required = true)
-	//@Qualifier("member")
 	private final Dao dao;
 
 	public MemberRegisterService(Dao dao) {
 		this.dao = dao;
 	}
-
-
-//	public MemberRegisterService(MemberDao memberDao) {
-//		this.memberDao = memberDao;
-//	}
-//	public MemberRegisterService() {
-//
-//	}
-//
-//	public void setMemberDao(MemberDao memberDao){
-//		this.memberDao = memberDao;
-//	}
 
 	public void regist(RegisterRequest req) throws AlreadyExistingMemberException {
 		

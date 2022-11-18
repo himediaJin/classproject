@@ -17,7 +17,7 @@
   <ul>
     <li>프로젝트 이름 : </li>
     <li>기능 : </li>
-    <li>  <a href="#"> Todo List </a> </li>
+    <li>  <a href="/todo/list"> Todo List </a> </li>
   </ul>
 
 </body>

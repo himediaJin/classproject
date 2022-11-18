@@ -36,7 +36,7 @@ public class LoginController {
             @RequestParam Map paramMap
             ){
 
-
+        log.info(request.getSession().getServletContext().getRealPath("/css"));
 
 
         String uId2 = request.getParameter("uid");

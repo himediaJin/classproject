@@ -12,7 +12,7 @@
 </head>
 <body>
 
-  <h1>My Page 1</h1>
+  <h1>My Page 2</h1>
 
 </body>
 </html>

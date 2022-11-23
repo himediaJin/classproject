@@ -45,6 +45,7 @@
         <property name="formatters">
             <set>
                 <bean class="com.todo.todospring.formatter.LocalDateFomatter" />
+                <bean class="com.todo.todospring.formatter.CheckBoxFormatter" />
             </set>
         </property>
     </bean>

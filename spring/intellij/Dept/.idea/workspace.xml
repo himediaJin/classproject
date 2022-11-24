@@ -5,13 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="278edea4-c0f2-4edf-8381-4b31395821b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/DeptListController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/DeptRegController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/service/DeptListService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/dept/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/DeptDeleteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/DeptEditController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/service/DeptDeleteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/service/DeptEditService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/service/DeptReadService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/service/DeptRegService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/dept/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/dept/register.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/servlet-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/servlet-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/DeptRegController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/DeptRegController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/dept/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/dept/list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TodoSpring/src/main/java/com/todo/todospring/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TodoSpring/src/main/java/com/todo/todospring/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TodoSpring/src/main/java/com/todo/todospring/domain/LoginInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TodoSpring/src/main/java/com/todo/todospring/domain/LoginInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TodoSpring/src/main/java/com/todo/todospring/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TodoSpring/src/main/java/com/todo/todospring/domain/Member.java" afterDir="false" />
@@ -66,11 +71,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/cheoho-hi/Documents/GitHub/classproject/spring/intellij/Dept/src/main/resources/mappers"
+    "last_opened_file_path": "C:/Users/cheoho-hi/Documents/GitHub/classproject/spring/intellij/Dept/src/main/webapp/WEB-INF/views/dept"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\cheoho-hi\Documents\GitHub\classproject\spring\intellij\Dept\src\main\webapp\WEB-INF\views\dept" />
       <recent name="C:\Users\cheoho-hi\Documents\GitHub\classproject\spring\intellij\Dept\src\main\resources\mappers" />
       <recent name="C:\Users\cheoho-hi\Documents\GitHub\classproject\spring\intellij\Dept\src\main\resources" />
       <recent name="C:\Users\cheoho-hi\Documents\GitHub\classproject\spring\intellij\Dept\src\main\webapp\WEB-INF\spring" />
@@ -170,6 +176,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Tomcat 9.0.68" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.68" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8 -Dconsole.encoding=UTF-8" />
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
@@ -281,7 +288,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669254010598</updated>
-      <workItem from="1669254013054" duration="8997000" />
+      <workItem from="1669254013054" duration="14093000" />
     </task>
     <servers />
   </component>

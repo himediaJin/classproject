@@ -5,34 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69c171f7-2a73-4b7a-9780-45c558e3ce62" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Dept/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/controller/emp/EmpEditController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/controller/emp/EmpListcontroller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/controller/emp/EmpRegController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/domain/EmpDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/mapper/EmpMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/service/emp/EmpEditService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/service/emp/EmpListService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/service/emp/EmpReadService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/service/emp/EmpRegService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Dept/src/main/webapp/WEB-INF/views/emp/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Dept/src/main/webapp/WEB-INF/views/emp/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Dept/src/main/webapp/WEB-INF/views/emp/register.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dept/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Dept/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Dept/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Dept/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dept/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Dept/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/controller/DeptDeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/controller/dept/DeptDeleteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/controller/DeptEditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/controller/dept/DeptEditController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/controller/DeptListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/controller/dept/DeptListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/controller/DeptRegController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/controller/dept/DeptRegController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/domain/DeptDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/domain/DeptDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/service/DeptDeleteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/service/dept/DeptDeleteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/service/DeptEditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/service/dept/DeptEditService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/service/DeptListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/service/dept/DeptListService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/service/DeptReadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/service/dept/DeptReadService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/service/DeptRegService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/service/dept/DeptRegService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +55,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/cheoho-hi/Documents",
+    "last_opened_file_path": "C:/Users/cheoho-hi/Downloads/BootstrapSample",
     "spring.configuration.checksum": "eafad681feab5ff58db3cab9a1f6886e"
   }
 }]]></component>
@@ -194,6 +169,7 @@
       <updated>1669273763158</updated>
       <workItem from="1669273764645" duration="2533000" />
       <workItem from="1669336487836" duration="324000" />
+      <workItem from="1669347593762" duration="710000" />
     </task>
     <servers />
   </component>

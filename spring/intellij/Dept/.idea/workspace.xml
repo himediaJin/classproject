@@ -5,14 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="278edea4-c0f2-4edf-8381-4b31395821b0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/dept/lists.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap/form-validation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap/offcanvas.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/assets/vendor/anchor.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/assets/vendor/clipboard.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/assets/vendor/holder.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/assets/vendor/jquery-slim.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/assets/vendor/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap/offcanvas.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BootstrapSample/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BootstrapSample/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BootstrapSample/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BootstrapSample/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/dept/DeptRegController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/dept/DeptRegController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/domain/DeptDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/domain/DeptDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/service/dept/DeptRegService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/service/dept/DeptRegService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/dept/DeptListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/dept/DeptListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/servlet-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/servlet-context.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +92,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/cheoho-hi/Desktop",
+    "last_opened_file_path": "C:/Users/cheoho-hi/Documents/GitHub/classproject/spring/intellij/Dept/src/main/webapp",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -93,11 +104,11 @@
       <recent name="com.app.manager.controller.emp" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\cheoho-hi\Documents\GitHub\classproject\spring\intellij\Dept\src\main\webapp\WEB-INF\views\emp" />
+      <recent name="C:\Users\cheoho-hi\Documents\GitHub\classproject\spring\intellij\Dept\src\main\webapp" />
       <recent name="C:\Users\cheoho-hi\Documents\GitHub\classproject\spring\intellij\Dept\src\main\webapp\WEB-INF\views\dept" />
+      <recent name="C:\Users\cheoho-hi\Documents\GitHub\classproject\spring\intellij\Dept\src\main\webapp\WEB-INF\views\emp" />
       <recent name="C:\Users\cheoho-hi\Documents\GitHub\classproject\spring\intellij\Dept\src\main\resources\mappers" />
       <recent name="C:\Users\cheoho-hi\Documents\GitHub\classproject\spring\intellij\Dept\src\main\resources" />
-      <recent name="C:\Users\cheoho-hi\Documents\GitHub\classproject\spring\intellij\Dept\src\main\webapp\WEB-INF\spring" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.app.manager.mapper" />
@@ -105,7 +116,7 @@
       <recent name="com.app.manager.controller.emp" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ConnectionTest.deptSelectByDeptnosTest">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.68">
     <configuration name="ConnectionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -337,7 +348,8 @@
       <option name="presentableId" value="Default" />
       <updated>1669254010598</updated>
       <workItem from="1669254013054" duration="14093000" />
-      <workItem from="1669334834318" duration="11943000" />
+      <workItem from="1669334834318" duration="12066000" />
+      <workItem from="1669354391049" duration="2291000" />
     </task>
     <servers />
   </component>

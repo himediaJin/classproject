@@ -5,40 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="278edea4-c0f2-4edf-8381-4b31395821b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/emp/EmpEditController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/emp/EmpListcontroller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/emp/EmpRegController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/domain/DeptSearchOption.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/domain/EmpDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/mapper/DeptMapper2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/mapper/EmpMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/service/emp/EmpEditService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/service/emp/EmpListService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/service/emp/EmpReadService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/service/emp/EmpRegService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/emp/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/emp/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/emp/register.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BootstrapSample/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BootstrapSample/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BootstrapSample/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BootstrapSample/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/DeptDeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/dept/DeptDeleteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/DeptEditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/dept/DeptEditController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/DeptListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/dept/DeptListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/DeptRegController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/dept/DeptRegController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/dept/DeptRegController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/dept/DeptRegController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/domain/DeptDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/domain/DeptDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/mapper/DeptMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/mapper/DeptMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/service/DeptDeleteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/service/dept/DeptDeleteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/service/DeptEditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/service/dept/DeptEditService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/service/DeptListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/service/dept/DeptListService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/service/DeptReadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/service/dept/DeptReadService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/service/DeptRegService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/service/dept/DeptRegService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/DeptMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/DeptMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/dept/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/dept/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ConnectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ConnectionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/service/dept/DeptRegService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/service/dept/DeptRegService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +30,17 @@
         <task path="$PROJECT_DIR$">
           <activation />
         </task>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="manager" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
@@ -353,7 +337,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669254010598</updated>
       <workItem from="1669254013054" duration="14093000" />
-      <workItem from="1669334834318" duration="7792000" />
+      <workItem from="1669334834318" duration="11943000" />
     </task>
     <servers />
   </component>

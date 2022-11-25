@@ -61,6 +61,10 @@ dependencies {
     implementation group: 'jstl', name: 'jstl', version: '1.2'
 
 
+    // https://mvnrepository.com/artifact/org.hibernate/hibernate-validator
+    implementation group: 'org.hibernate', name: 'hibernate-validator', version: '6.2.1.Final'
+
+
 }
 
 test {

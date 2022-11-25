@@ -2,6 +2,7 @@ package com.app.manager.domain;
 
 import lombok.*;
 
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter

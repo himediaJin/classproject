@@ -5,25 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="278edea4-c0f2-4edf-8381-4b31395821b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/DeptDeleteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/DeptEditController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/service/DeptDeleteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/service/DeptEditService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/service/DeptReadService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/service/DeptRegService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/dept/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/dept/register.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/emp/EmpEditController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/emp/EmpListcontroller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/emp/EmpRegController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/domain/DeptSearchOption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/domain/EmpDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/mapper/DeptMapper2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/mapper/EmpMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/service/emp/EmpEditService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/service/emp/EmpListService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/service/emp/EmpReadService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/service/emp/EmpRegService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/emp/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/emp/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/emp/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BootstrapSample/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BootstrapSample/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BootstrapSample/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BootstrapSample/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/DeptRegController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/DeptRegController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/DeptDeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/dept/DeptDeleteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/DeptEditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/dept/DeptEditController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/DeptListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/dept/DeptListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/DeptRegController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/controller/dept/DeptRegController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/domain/DeptDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/domain/DeptDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/mapper/DeptMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/mapper/DeptMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/service/DeptDeleteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/service/dept/DeptDeleteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/service/DeptEditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/service/dept/DeptEditService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/service/DeptListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/service/dept/DeptListService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/service/DeptReadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/service/dept/DeptReadService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/manager/service/DeptRegService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/manager/service/dept/DeptRegService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/DeptMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/DeptMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/dept/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/dept/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TodoSpring/src/main/java/com/todo/todospring/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TodoSpring/src/main/java/com/todo/todospring/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TodoSpring/src/main/java/com/todo/todospring/domain/LoginInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TodoSpring/src/main/java/com/todo/todospring/domain/LoginInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TodoSpring/src/main/java/com/todo/todospring/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TodoSpring/src/main/java/com/todo/todospring/domain/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TodoSpring/src/main/java/com/todo/todospring/interceptor/AuthCheckInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TodoSpring/src/main/java/com/todo/todospring/interceptor/AuthCheckInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TodoSpring/src/main/java/com/todo/todospring/service/MemberRegService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TodoSpring/src/main/java/com/todo/todospring/service/MemberRegService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TodoSpring/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TodoSpring/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TodoSpring/src/main/webapp/WEB-INF/views/loginForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../TodoSpring/src/main/webapp/WEB-INF/views/loginForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ConnectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ConnectionTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +49,16 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -70,19 +95,33 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/cheoho-hi/Documents/GitHub/classproject/spring/intellij/Dept/src/main/webapp/WEB-INF/views/dept"
+    "last_opened_file_path": "C:/Users/cheoho-hi/Desktop",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "spring.configuration.checksum": "18b1b63f8c34707921ec5027ed5699f3"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.app.manager.controller.emp" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\cheoho-hi\Documents\GitHub\classproject\spring\intellij\Dept\src\main\webapp\WEB-INF\views\emp" />
       <recent name="C:\Users\cheoho-hi\Documents\GitHub\classproject\spring\intellij\Dept\src\main\webapp\WEB-INF\views\dept" />
       <recent name="C:\Users\cheoho-hi\Documents\GitHub\classproject\spring\intellij\Dept\src\main\resources\mappers" />
       <recent name="C:\Users\cheoho-hi\Documents\GitHub\classproject\spring\intellij\Dept\src\main\resources" />
       <recent name="C:\Users\cheoho-hi\Documents\GitHub\classproject\spring\intellij\Dept\src\main\webapp\WEB-INF\spring" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.app.manager.mapper" />
+      <recent name="com.app.manager.service.emp" />
+      <recent name="com.app.manager.controller.emp" />
+    </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.68">
+  <component name="RunManager" selected="Gradle.ConnectionTest.deptSelectByDeptnosTest">
     <configuration name="ConnectionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -106,7 +145,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ConnectionTest.connectionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ConnectionTest.deptSelectByDeptnosTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -119,7 +158,30 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ConnectionTest.connectionTest&quot;" />
+            <option value="&quot;ConnectionTest.deptSelectByDeptnosTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ConnectionTest.deptSelectByOptionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ConnectionTest.deptSelectByOptionTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -265,18 +327,20 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Gradle.ConnectionTest.deptSelectByDeptnosTest" />
+      <item itemvalue="Gradle.ConnectionTest.deptSelectByOptionTest" />
       <item itemvalue="Gradle.ConnectionTest" />
-      <item itemvalue="Gradle.ConnectionTest.connectionTest" />
       <item itemvalue="Gradle.ConnectionTest.getDeptListTest" />
       <item itemvalue="Gradle.ConnectionTest.getTimeTest" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.68" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ConnectionTest.deptSelectByDeptnosTest" />
+        <item itemvalue="Gradle.ConnectionTest.deptSelectByOptionTest" />
         <item itemvalue="Gradle.ConnectionTest.getDeptListTest" />
         <item itemvalue="Gradle.ConnectionTest" />
         <item itemvalue="Gradle.ConnectionTest.getTimeTest" />
-        <item itemvalue="Gradle.ConnectionTest.connectionTest" />
       </list>
     </recent_temporary>
   </component>
@@ -289,6 +353,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669254010598</updated>
       <workItem from="1669254013054" duration="14093000" />
+      <workItem from="1669334834318" duration="7792000" />
     </task>
     <servers />
   </component>

@@ -18,7 +18,20 @@
 
   <a href="/dept/register">부서 등록</a>
 
-    <table border="1">
+  <div style="margin-top: 10px;"  >
+      <form>
+          검색
+          <select name="searchType">
+              <option value="dname">부서이름</option>
+              <option value="loc">부서위치</option>
+          </select>
+          <input type="text" name="keyword">
+          <input type="submit" value="검색">
+      </form>
+  </div>
+
+
+  <table border="1">
         <tr>
             <th>부서번호</th>
             <th>부서이름</th>

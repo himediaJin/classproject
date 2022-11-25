@@ -1,19 +1,17 @@
-package com.app.manager.service;
+package com.app.manager.service.dept;
 
-import com.app.manager.domain.DeptDTO;
 import com.app.manager.mapper.DeptMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class DeptRegService {
+public class DeptDeleteService {
 
     @Autowired(required = false)
     private DeptMapper deptMapper;
 
-    public int  insertDept(DeptDTO deptDTO){
-        return deptMapper.insertDept(deptDTO);
+    public int deleteDept(int deptno){
+        return deptMapper.deleteByDeptno(deptno);
     }
-
 
 }

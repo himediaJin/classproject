@@ -50,7 +50,7 @@ dependencies {
     implementation group: 'commons-io', name: 'commons-io', version: '2.5'
 
 
-
+    implementation group: 'org.hibernate', name: 'hibernate-validator', version: '6.2.1.Final'
 
 
 

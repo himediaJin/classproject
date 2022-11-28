@@ -15,29 +15,45 @@
             height: 40px;
         }
     </style>
+
+    <%@ include file="/WEB-INF/views/frame/metaresource.jsp"%>
 </head>
 <body>
 
-<h1>Todo Project </h1>
 
-<ul>
-    <li>프로젝트 이름 :</li>
-    <li>기능 :</li>
-    <li><a href="/todo/list"> Todo List </a></li>
 
-    <c:if test="${loginInfo eq null}">
-    <li><a href="/login">로그인</a></li>
-    <li><a href="/member/register">회원가입</a></li>
-    </c:if>
+<%@ include file="/WEB-INF/views/frame/nav.jsp"%>
+<%@ include file="/WEB-INF/views/frame/offcanvas.jsp"%>
 
-    <c:if test="${loginInfo ne null}">
-    <li> ${loginInfo.uid} ( ${loginInfo.uname} )  <img src="/uploadfile/member/${loginInfo.uphoto}"> </li>
-    <li><a href="/logout">로그아웃</a></li>
-    </c:if>
+<main class="bg-white m-1 border shadow-sm ">
 
-</ul>
+    <div class="row p-3">
+        <h1 class="border rounded py-2 bg-primary text-white">Todo Project </h1>
+    </div>
 
-${loginInfo}
 
+    <ul>
+        <li>프로젝트 이름 :</li>
+        <li>기능 :</li>
+        <li><a href="/todo/list"> Todo List </a></li>
+
+        <c:if test="${loginInfo eq null}">
+            <li><a href="/login">로그인</a></li>
+            <li><a href="/member/register">회원가입</a></li>
+        </c:if>
+
+        <c:if test="${loginInfo ne null}">
+            <li> ${loginInfo.uid} ( ${loginInfo.uname} )  <img src="/uploadfile/member/${loginInfo.uphoto}"> </li>
+            <li><a href="/logout">로그아웃</a></li>
+        </c:if>
+
+    </ul>
+
+    ${loginInfo}
+</main>
+
+
+
+<%@ include file="/WEB-INF/views/frame/jsresource.jsp"%>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="debug">
+<Configuration status="info">
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
@@ -7,11 +7,11 @@
     </Appenders>
     <Loggers>
 
-        <logger name="org.springframework" level="debug" addiitivity="false">
+        <logger name="org.springframework" level="info" additivity="false">
             <AppenderRef ref="Console"/>
         </logger>
 
-        <logger name="com.todo.todospring" level="info" addiitivity="false">
+        <logger name="com.todo.todospring" level="info" additivity="false">
             <AppenderRef ref="Console"/>
         </logger>
 

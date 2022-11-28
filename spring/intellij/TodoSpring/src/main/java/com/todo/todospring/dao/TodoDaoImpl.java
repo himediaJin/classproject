@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-@Repository(value = "todoDao")
+
 public class TodoDaoImpl implements TodoDao {
 
     @Override

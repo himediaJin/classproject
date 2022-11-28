@@ -18,6 +18,7 @@
 
 <h1>Todo Modify</h1>
 <form method="post">
+    <input type="hidden" name="writer" value="${loginInfo.idx}">
     <table>
         <tr>
             <td>번호</td>

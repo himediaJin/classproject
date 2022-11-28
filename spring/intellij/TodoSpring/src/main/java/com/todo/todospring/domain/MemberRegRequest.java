@@ -23,6 +23,8 @@ public class MemberRegRequest {
 
     private MultipartFile uphoto;
 
+
+
     public Member toMember() {
         Member member = Member.builder()
                 .uid(this.uid)

@@ -20,6 +20,7 @@ public class Member {
 
     public LoginInfo toLoginInfo(){
         return LoginInfo.builder()
+                .idx(this.idx)
                 .uid(this.uid)
                 .uname(this.uname)
                 .uphoto(this.uphoto)

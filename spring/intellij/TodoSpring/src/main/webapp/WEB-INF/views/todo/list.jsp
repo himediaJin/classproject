@@ -14,11 +14,16 @@
         td {
             padding: 5px;
         }
+        .loginInfo{
+            border: 1px solid #333;
+        }
     </style>
 </head>
 <body>
 
 <h1>${title}</h1>
+
+<div class="loginInfo">${loginInfo}</div>
 
 <table>
     <tr>

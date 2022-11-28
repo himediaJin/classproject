@@ -37,11 +37,7 @@ public class TodoDaoImpl implements TodoDao {
 
     private TodoDTO toTodoDto(ResultSet rs) throws SQLException {
 
-        TodoDTO dto = new TodoDTO(
-                rs.getLong(1),
-                rs.getString(2),
-                rs.getDate(3).toLocalDate(),
-                rs.getBoolean(4));
+        TodoDTO dto = new TodoDTO();
 
         /*
         TodoDTO dto = TodoDTO.builder()

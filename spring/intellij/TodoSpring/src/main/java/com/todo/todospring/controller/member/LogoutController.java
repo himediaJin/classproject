@@ -1,4 +1,4 @@
-package com.todo.todospring.controller;
+package com.todo.todospring.controller.member;
 
 import lombok.Getter;
 import org.springframework.stereotype.Controller;

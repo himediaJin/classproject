@@ -10,6 +10,8 @@ import lombok.*;
 @Builder
 public class LoginInfo {
 
+    // 2022.11.28 추가
+    private int idx;
     private String uid;
     private String uname;
     private String uphoto;

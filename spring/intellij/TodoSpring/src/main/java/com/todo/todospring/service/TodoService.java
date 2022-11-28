@@ -21,10 +21,10 @@ public class TodoService {
     private TodoMapper todoMapper;
 
 
-    public List<TodoDTO> getTodoList() {
+    public List<TodoDTO> getTodoList(int idx) {
         List<TodoDTO> list = null;
         try {
-            list = todoMapper.selectAll();
+            list = todoMapper.selectAll(idx);
             log.info(list);
         } catch (Exception e) {
             e.printStackTrace();

@@ -14,7 +14,7 @@
             parameterType="com.todo.todospring.domain.TodoDTO"
     >
 
-        insert into tbl_todo (todo, dueDate) values (#{todo}, #{dueDate})
+        insert into tbl_todo (todo, dueDate, writer) values (#{todo}, #{dueDate}, #{writer})
 
     </insert>
     

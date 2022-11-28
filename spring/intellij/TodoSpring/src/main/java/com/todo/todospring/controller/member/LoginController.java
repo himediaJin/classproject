@@ -1,4 +1,4 @@
-package com.todo.todospring.controller;
+package com.todo.todospring.controller.member;
 
 import com.todo.todospring.domain.Member;
 import com.todo.todospring.service.LoginService;

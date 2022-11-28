@@ -12,8 +12,8 @@ import java.util.List;
 public interface TodoMapper {
 
     // Todo 전체 리스트
-    @Select("select * from tbl_todo")
-    List<TodoDTO> selectAll();
+    @Select("select * from tbl_todo where writer = #{idx}")
+    List<TodoDTO> selectAll(int idx);
 
     // tno 값으로 하나의 Todo 정보를 가져오는 메소드
     @Select("select * from tbl_todo where tno=#{tno}")

@@ -1,4 +1,4 @@
-package com.todo.todospring.controller;
+package com.todo.todospring.controller.todo;
 
 import com.todo.todospring.domain.TodoDTO;
 import com.todo.todospring.service.TodoService;

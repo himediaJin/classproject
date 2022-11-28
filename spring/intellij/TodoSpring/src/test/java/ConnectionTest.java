@@ -77,7 +77,7 @@ public class ConnectionTest {
 
     @Test
     public void selectAllTest(){
-        List<TodoDTO> list = todoMapper.selectAll();
+        List<TodoDTO> list = todoMapper.selectAll(9);
         log.info(list);
     }
 

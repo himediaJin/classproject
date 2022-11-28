@@ -25,7 +25,9 @@ public class MemberRegService {
 
     // 사용자 요청 데이터를 받고, 파일 업로드 처리, Dao insert 요청
     @Transactional
-    public int memberReg(MemberRegRequest regRequest, HttpServletRequest request) throws Exception {
+    public int memberReg(
+            MemberRegRequest regRequest,
+            HttpServletRequest request) throws Exception {
 
         String newFileName = null;
 

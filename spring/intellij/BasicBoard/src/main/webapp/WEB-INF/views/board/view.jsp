@@ -134,17 +134,17 @@
                     console.log('res', res.data)
                     const newReply = res.data
 
-                    const tr_length = document.querySelectorAll('#replyList>tr').length
-                    const trIndex = Number(document.querySelectorAll('#replyList>tr')[tr_length-1].getAttribute('tr-index'))+1
+                    //const tr_length = document.querySelectorAll('#replyList>tr').length
+                    //const trIndex = Number(document.querySelectorAll('#replyList>tr')[tr_length-1].getAttribute('tr-index'))+1
                     const newTR = document.createElement('tr')
-                    let str = '' // '<td class="col-1">'+trIndex+'</td>'
+                    let str = '' // '<td class="col-1">'+newReply.rno+'</td>'
                     str += '<td class="col-2">'+newReply.replyer+'</td>'
                     str += '<td class="col">'+newReply.reply+'</td>'
                     str += '<td class="col-2">'+newReply.replydate+'</td>'
-                    str += '<td class="col-1"><a href="javascript: delTR('+trIndex+')" class="badge bg-danger text-decoration-none">x</a></td>'
+                    str += '<td class="col-1"><a href="javascript: delTR('+newReply.rno+')" class="badge bg-danger text-decoration-none">x</a></td>'
                     newTR.innerHTML = str
                     newTR.setAttribute('class', 'fs-6 text-center')
-                    newTR.setAttribute('tr-index', trIndex)
+                    newTR.setAttribute('tr-index', newReply.rno)
                     replyList.appendChild(newTR)
 
                 })
@@ -158,14 +158,14 @@
 
         list.forEach((reply, index) => {
             const newTR = document.createElement('tr')
-            let str = '' // <td class="col-1">'+index+'</td>'
+            let str = '' // <td class="col-1">'+reply.rno+'</td>'
             str += '<td class="col-2">'+reply.replyer+'</td>'
             str += '<td class="col">'+reply.reply+'</td>'
             str += '<td class="col-2">'+reply.replydate+'</td>'
-            str += '<td class="col-1"><a href="javascript: delTR('+index+')" class="badge bg-danger text-decoration-none">x</a></td>'
+            str += '<td class="col-1"><a href="javascript: delTR('+reply.rno+')" class="badge bg-danger text-decoration-none">x</a></td>'
             newTR.innerHTML = str
             newTR.setAttribute('class', 'fs-6 text-center')
-            newTR.setAttribute('tr-index', index)
+            newTR.setAttribute('tr-index', reply.rno)
             replyList.appendChild(newTR)
         });
     }

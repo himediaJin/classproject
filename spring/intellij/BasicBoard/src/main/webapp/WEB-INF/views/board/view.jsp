@@ -22,7 +22,7 @@
 
     <div class="card">
         <div class="card-header">
-            <h3 class="title">Basic Board Registration</h3>
+            <h3 class="title">Basic Board Article Read</h3>
         </div>
         <div class="card-body">
 
@@ -34,21 +34,20 @@
                 </div>
                 <div class="mb-3">
                     <label for="content" class="form-label">내용</label>
-                    <textarea class="form-control" id="content" name="content" rows="3" readonly> ${board.content}</textarea>
+                    <textarea class="form-control" id="content" name="content" rows="3"  readonly>${board.content}</textarea>
                 </div>
                 <div class="mb-3">
                     <label for="writer" class="form-label">작성자</label>
-                    <input type="text" class="form-control" id="writer" name="writer" value="${board.writer}" readonly>
+                    <input type="text" class="form-control" id="writer" name="writer" value="${board.writer}"  readonly>
                 </div>
                 <div class="mb-3">
-                    <label for="regdate" class="form-label">작성자</label>
-                    <input type="text" class="form-control" id="regdate" name="regdate" value="${board.regdate}" readonly>
+                    <label for="regdate" class="form-label">등록일</label>
+                    <input type="text" class="form-control" id="regdate" name="regdate" value="${board.regdate}"  readonly>
                 </div>
                 <div class="mb-3">
-                    <label for="updatedate" class="form-label">작성자</label>
-                    <input type="text" class="form-control" id="updatedate" name="updatedate" value="${board.updatedate}" readonly>
+                    <label for="updatedate" class="form-label">수정일</label>
+                    <input type="text" class="form-control" id="updatedate" name="updatedate" value="${board.updatedate}"  readonly>
                 </div>
-
 
                 <div class="text-end m-3">
                     <a href="/board/edit?bno=${board.bno}" class="btn btn-warning" role="button">수정</a>
@@ -56,8 +55,19 @@
                     <a href="/board/list" class="btn btn-primary" role="button">리스트</a>
                 </div>
 
+        </div>
 
+        <div class="card m-3">
+            <div class="card-header">
+                <h3 class="title">Article Reply</h3>
+            </div>
+            <div class="card-body">
+                <table class="table ">
+                    <tbody id="replyList">
 
+                    </tbody>
+                </table>
+            </div>
         </div>
 
     </div>
@@ -69,5 +79,70 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+
+    let replyList;
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        replyList = document.querySelector('#replyList')
+
+        // 비동기 통신 : 댓글 리스트 가져오기
+        axios.get('/reply')
+            .then(res => {
+                console.log('res', res.data)
+                // 태그 캐스팅 -> 데이터 변경
+
+                addReplyRow(res.data)
+
+            })
+            .catch(err => console.log(err))
+    })
+
+    function addReplyRow(list){
+
+        console.log(list)
+
+        list.forEach((reply, index) => {
+            const newTR = document.createElement('tr')
+            let str = '<td class="col-1">'+reply.rno+'</td>'
+            str += '<td class="col">'+reply.reply+'</td>'
+            str += '<td class="col-2">'+reply.replyer+'</td>'
+            str += '<td class="col-2">'+reply.replydate+'</td>'
+            str += '<td class="col-1"><a href="javascript: delTR('+reply.rno+')" class="badge bg-danger text-decoration-none">x</a></td>'
+            newTR.innerHTML = str
+            newTR.setAttribute('class', 'fs-6 text-center')
+            newTR.setAttribute('tr-index', reply.rno)
+            replyList.appendChild(newTR)
+        });
+    }
+
+    function delTR(index){
+
+
+        console.log('index', index)
+
+        // 비동기 통신 : 데이터 삭제
+        axios.delete('/reply/'+index)
+            .then(res => {
+                console.log('res', res.data)
+                // 화면에서 행 삭제
+                const delTR = document.querySelector('tr[tr-index="'+index+'"]')
+                replyList.removeChild(delTR)
+            })
+            .catch(err => console.log(err))
+
+    }
+
+</script>
+
+
+
+
+
+
+
 </body>
 </html>

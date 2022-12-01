@@ -5,25 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25064e6a-9d55-4917-9fea-9a4247ce51a2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/controller/BoardListController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/controller/BoardRegController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/controller/BoardViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/controller/RestTemplateTestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/domain/BoardDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/domain/BoardListDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/domain/ReplyDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/service/BoardListService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/service/BoardRegService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/service/BoardViewService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/reg.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/view.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/nav.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/controller/ReplyRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/controller/board/BoardDeleteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/controller/board/BoardEditController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/formatter/LocalDateFomatter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/mapper/ReplyMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/service/ReplyListService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/service/board/BoardDeleteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/service/board/BoardEditService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/board/controller/BoardListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/board/controller/board/BoardListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/board/controller/BoardRegController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/board/controller/board/BoardRegController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/board/controller/BoardViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/board/controller/board/BoardViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/board/domain/ReplyDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/board/domain/ReplyDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/board/mapper/BoardMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/board/mapper/BoardMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/board/service/BoardListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/board/service/board/BoardListService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/board/service/BoardRegService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/board/service/board/BoardRegService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/board/service/BoardViewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/board/service/board/BoardViewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/servlet-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/servlet-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/view.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/doc/ddl.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/doc/ddl.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Dept/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Dept/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/controller/rest/DeptJsonMessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/controller/rest/DeptJsonMessageController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,11 +40,28 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Board" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -64,21 +86,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/cheoho-hi/Documents/GitHub/classproject/spring/intellij/BasicBoard/src/main/webapp/WEB-INF/views/board"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/cheoho-hi/Documents/GitHub/classproject/spring/intellij/BasicBoard/src/main/webapp/WEB-INF/views/board&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;226160abf295f1e4df3fa7af26b90864&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.app.board.service" />
@@ -94,8 +117,10 @@
       <recent name="C:\Users\cheoho-hi\Documents\GitHub\classproject\spring\intellij\BasicBoard\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.app.board.service" />
+      <recent name="com.app.board.formatter" />
+      <recent name="com.app.board.mapper" />
       <recent name="com.app.board.controller" />
+      <recent name="com.app.board.service" />
     </key>
   </component>
   <component name="RunManager">
@@ -197,7 +222,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669776996707</updated>
-      <workItem from="1669776997999" duration="19262000" />
+      <workItem from="1669776997999" duration="19312000" />
+      <workItem from="1669853812866" duration="4434000" />
+      <workItem from="1669858436743" duration="9125000" />
     </task>
     <servers />
   </component>

@@ -8,7 +8,7 @@ create table tbl_board (
 );
 alter table tbl_board add constraint pk_board primary key (bno);
 
-create table tbl_reply (
+create table tbl_board (
                            rno INT,
                            bno INT not null,
                            reply varchar(1000) not null,
@@ -16,5 +16,5 @@ create table tbl_reply (
                            replyDate date default (now()),
                            updateDate date default (now())
 );
-alter table tbl_reply add constraint pk_reply primary key (rno);
-alter table tbl_reply add constraint fk_reply_board foreign key (bno) references tbl_board (bno);
+alter table tbl_board add constraint pk_reply primary key (rno);
+alter table tbl_board add constraint fk_reply_board foreign key (bno) references tbl_board (bno);

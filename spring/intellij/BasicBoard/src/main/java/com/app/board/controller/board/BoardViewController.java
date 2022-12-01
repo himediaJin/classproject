@@ -1,9 +1,7 @@
-package com.app.board.controller;
+package com.app.board.controller.board;
 
 import com.app.board.domain.BoardDTO;
-import com.app.board.domain.BoardListDTO;
-import com.app.board.service.BoardListService;
-import com.app.board.service.BoardViewService;
+import com.app.board.service.board.BoardViewService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,7 +27,6 @@ public class BoardViewController {
         log.info(boardDTO);
 
         model.addAttribute("board", boardDTO);
-
 
     }
 

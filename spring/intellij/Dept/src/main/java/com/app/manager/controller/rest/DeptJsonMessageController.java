@@ -3,6 +3,7 @@ package com.app.manager.controller.rest;
 import com.app.manager.domain.DeptDTO;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
@@ -13,7 +14,11 @@ public class DeptJsonMessageController {
 
     @GetMapping("/dept/json")
     @ResponseBody
-    public List<DeptDTO> listJson(){
+    public List<DeptDTO> listJson(
+
+            @RequestParam(value = "id", required = false) String id
+
+    ){
 
         List<DeptDTO> list = new ArrayList<>();
         list.add(new DeptDTO(10, "test10", "LOC10"));

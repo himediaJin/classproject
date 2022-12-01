@@ -22,6 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const checkbox = document.createElement('input')
         const todo = document.createElement('span')
         const btn = document.createElement('button')
+
+        const newTr = document.createElement('tr')
+        newTr.innerHTML = '<td>'+RemotePlayback.rno+'</td><td>'+reply.reply+'</td><td></td>';
         
         newDiv.appendChild(checkbox)
         newDiv.appendChild(todo)

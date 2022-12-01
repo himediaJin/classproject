@@ -1,10 +1,8 @@
 package com.app.board.mapper;
 
 import com.app.board.domain.BoardDTO;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import com.app.board.domain.ReplyDTO;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -25,4 +23,10 @@ public interface BoardMapper {
 
     @Insert("insert into tbl_board (title, content, writer) values (#{title}, #{content}, #{writer})")
     int insertBoardContent(BoardDTO boardDTO);
+
+    @Update("update tbl_board set title=#{title}, content=#{content}, writer=#{writer}, updatedate=now() where bno=#{bno}")
+    int updateBoardArticle(BoardDTO boardDTO);
+
+    @Delete("delete from tbl_board where bno=#{bno}")
+    int deleteBoardArticle(int bno);
 }

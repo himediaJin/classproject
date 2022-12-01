@@ -1,6 +1,7 @@
-package com.app.board.service;
+package com.app.board.service.board;
 
 import com.app.board.domain.BoardDTO;
+import com.app.board.domain.ReplyDTO;
 import com.app.board.domain.BoardListDTO;
 import com.app.board.mapper.BoardMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +22,8 @@ public class BoardListService {
         // 현재 요청 페이지
         int requestPageNum = pageNum;
 
-        // 요청 페이지의 리스트 항목 BoardDTO
-        //List<BoardDTO> list = boardMapper.selectAll();
+        // 요청 페이지의 리스트 항목 ReplyDTO
+        //List<ReplyDTO> list = boardMapper.selectAll();
         List<BoardDTO> list = boardMapper.selectList((requestPageNum-1)*10, countPerPage);
 
         // 전체 게시물 게수

@@ -61,6 +61,20 @@
             <div class="card-header">
                 <h3 class="title">Article Reply</h3>
             </div>
+            <div class="border-bottom p-3">
+                <h5 class="title my-2">댓글 작성</h5>
+                <div class="mb-3">
+                    <label for="replyer" class="form-label">작성자</label>
+                    <input type="text" class="form-control" id="replyer" name="replyer">
+                </div>
+                <div class="mb-3">
+                    <label for="reply" class="form-label">내용</label>
+                    <textarea class="form-control" id="reply" name="reply" rows="3"></textarea>
+                </div>
+                <div>
+                    <input type="reset" value="등록" id="btn_reply" class="form-control btn btn-primary">
+                </div>
+            </div>
             <div class="card-body">
                 <table class="table ">
                     <tbody id="replyList">
@@ -88,6 +102,7 @@
     document.addEventListener('DOMContentLoaded', () => {
 
         replyList = document.querySelector('#replyList')
+        const btn_reply = document.querySelector('#btn_reply')
 
         // 비동기 통신 : 댓글 리스트 가져오기
         axios.get('/reply')
@@ -99,6 +114,42 @@
 
             })
             .catch(err => console.log(err))
+
+
+        ////////////////////////////////////
+
+        btn_reply.addEventListener('click', ()=>{
+
+            const payload = {
+                bno : ${param.bno},
+                reply : document.querySelector("#reply").value,
+                replyer : document.querySelector("#replyer").value,
+            }
+
+            console.log(payload)
+
+            // 비동기 통신 : 댓글 등록
+            axios.post('/reply', payload)
+                .then(res => {
+                    console.log('res', res.data)
+                    const newReply = res.data
+
+                    const tr_length = document.querySelectorAll('#replyList>tr').length
+                    const trIndex = Number(document.querySelectorAll('#replyList>tr')[tr_length-1].getAttribute('tr-index'))+1
+                    const newTR = document.createElement('tr')
+                    let str = '' // '<td class="col-1">'+trIndex+'</td>'
+                    str += '<td class="col-2">'+newReply.replyer+'</td>'
+                    str += '<td class="col">'+newReply.reply+'</td>'
+                    str += '<td class="col-2">'+newReply.replydate+'</td>'
+                    str += '<td class="col-1"><a href="javascript: delTR('+trIndex+')" class="badge bg-danger text-decoration-none">x</a></td>'
+                    newTR.innerHTML = str
+                    newTR.setAttribute('class', 'fs-6 text-center')
+                    newTR.setAttribute('tr-index', trIndex)
+                    replyList.appendChild(newTR)
+
+                })
+                .catch(err => console.log(err))
+        })
     })
 
     function addReplyRow(list){
@@ -107,22 +158,24 @@
 
         list.forEach((reply, index) => {
             const newTR = document.createElement('tr')
-            let str = '<td class="col-1">'+reply.rno+'</td>'
-            str += '<td class="col">'+reply.reply+'</td>'
+            let str = '' // <td class="col-1">'+index+'</td>'
             str += '<td class="col-2">'+reply.replyer+'</td>'
+            str += '<td class="col">'+reply.reply+'</td>'
             str += '<td class="col-2">'+reply.replydate+'</td>'
-            str += '<td class="col-1"><a href="javascript: delTR('+reply.rno+')" class="badge bg-danger text-decoration-none">x</a></td>'
+            str += '<td class="col-1"><a href="javascript: delTR('+index+')" class="badge bg-danger text-decoration-none">x</a></td>'
             newTR.innerHTML = str
             newTR.setAttribute('class', 'fs-6 text-center')
-            newTR.setAttribute('tr-index', reply.rno)
+            newTR.setAttribute('tr-index', index)
             replyList.appendChild(newTR)
         });
     }
 
     function delTR(index){
-
-
         console.log('index', index)
+
+        if(!confirm('댓글을 삭제하시겠습니까?')){
+            return;
+        }
 
         // 비동기 통신 : 데이터 삭제
         axios.delete('/reply/'+index)
@@ -133,7 +186,6 @@
                 replyList.removeChild(delTR)
             })
             .catch(err => console.log(err))
-
     }
 
 </script>

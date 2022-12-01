@@ -5,30 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25064e6a-9d55-4917-9fea-9a4247ce51a2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/controller/ReplyRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/controller/board/BoardDeleteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/controller/board/BoardEditController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/formatter/LocalDateFomatter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/mapper/ReplyMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/service/ReplyListService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/service/board/BoardDeleteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/service/board/BoardEditService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/service/service/ReplyDeleteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/service/service/ReplyInsertService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/board/controller/BoardListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/board/controller/board/BoardListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/board/controller/BoardRegController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/board/controller/board/BoardRegController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/board/controller/BoardViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/board/controller/board/BoardViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/board/controller/ReplyRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/board/controller/ReplyRestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/board/domain/ReplyDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/board/domain/ReplyDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/board/mapper/BoardMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/board/mapper/BoardMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/board/service/BoardListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/board/service/board/BoardListService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/board/service/BoardRegService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/board/service/board/BoardRegService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/board/service/BoardViewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/board/service/board/BoardViewService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/servlet-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/servlet-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/board/mapper/ReplyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/board/mapper/ReplyMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/board/service/ReplyListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/board/service/service/ReplyListService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/view.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/doc/ddl.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/doc/ddl.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Dept/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Dept/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/controller/rest/DeptJsonMessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Dept/src/main/java/com/app/manager/controller/rest/DeptJsonMessageController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +102,7 @@
       <recent name="C:\Users\cheoho-hi\Documents\GitHub\classproject\spring\intellij\BasicBoard\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.app.board.service.service" />
       <recent name="com.app.board.formatter" />
       <recent name="com.app.board.mapper" />
       <recent name="com.app.board.controller" />
@@ -224,7 +210,7 @@
       <updated>1669776996707</updated>
       <workItem from="1669776997999" duration="19312000" />
       <workItem from="1669853812866" duration="4434000" />
-      <workItem from="1669858436743" duration="9125000" />
+      <workItem from="1669858436743" duration="15899000" />
     </task>
     <servers />
   </component>

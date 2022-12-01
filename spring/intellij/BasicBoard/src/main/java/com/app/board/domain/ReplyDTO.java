@@ -9,6 +9,7 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @Builder
+@ToString
 public class ReplyDTO {
 
     private int rno;

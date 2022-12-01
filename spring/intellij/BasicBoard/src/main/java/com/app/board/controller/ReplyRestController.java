@@ -1,7 +1,10 @@
 package com.app.board.controller;
 
 import com.app.board.domain.ReplyDTO;
-import com.app.board.service.ReplyListService;
+import com.app.board.service.service.ReplyDeleteService;
+import com.app.board.service.service.ReplyInsertService;
+import com.app.board.service.service.ReplyListService;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -9,16 +12,24 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Log4j2
 @RestController
 @RequestMapping("/reply")
 public class ReplyRestController {
 
     @Autowired
     private ReplyListService replyListService;
+
+    @Autowired
+    private ReplyDeleteService replyDeleteService;
+
+    @Autowired
+    private ReplyInsertService replyInsertService;
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<ReplyDTO>> selectAll(){
@@ -28,6 +39,35 @@ public class ReplyRestController {
 
         return new ResponseEntity<>(replyListService.selectAll(), httpHeaders, HttpStatus.OK);
     }
+
+    @DeleteMapping("/{rno}")
+    public ResponseEntity<String> deleteReply(
+            @PathVariable("rno") int rno
+    ){
+
+        log.info(replyDeleteService.deleteReply(rno) + rno);
+
+        return new ResponseEntity<>("deleted ...", HttpStatus.OK);
+    }
+
+    @PostMapping()
+    public ResponseEntity<ReplyDTO> insertReply(
+            @RequestBody ReplyDTO replyDTO
+    ){
+
+
+        log.info(replyDTO);
+
+        replyInsertService.insertReply(replyDTO);
+
+        replyDTO.setReplydate(LocalDate.now().toString());
+        replyDTO.setUpdatedate(LocalDate.now().toString());
+
+        log.info(replyDTO);
+
+        return new ResponseEntity<>(replyDTO, HttpStatus.OK);
+    }
+
 
 
     @ExceptionHandler(Exception.class)

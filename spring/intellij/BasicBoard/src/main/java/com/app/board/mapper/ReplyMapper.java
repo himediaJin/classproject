@@ -28,4 +28,8 @@ public interface ReplyMapper {
 
     @Delete("delete from tbl_reply where rno=#{rno}")
     int deleteReply(int rno);
+
+    @Insert("insert into tbl_reply (bno, reply, replyer) values (#{bno},#{reply},#{replyer})")
+    @Options(useGeneratedKeys = true, keyProperty = "rno", keyColumn = "rno")
+    int insertRepl(ReplyDTO replyDTO);
 }

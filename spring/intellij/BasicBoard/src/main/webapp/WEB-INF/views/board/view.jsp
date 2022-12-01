@@ -147,6 +147,9 @@
                     newTR.setAttribute('tr-index', newReply.rno)
                     replyList.appendChild(newTR)
 
+                    document.querySelector("#reply").value = ''
+                    document.querySelector("#replyer").value = ''
+
                 })
                 .catch(err => console.log(err))
         })

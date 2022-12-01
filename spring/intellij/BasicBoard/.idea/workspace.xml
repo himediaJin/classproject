@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25064e6a-9d55-4917-9fea-9a4247ce51a2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/ReplyMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/view.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/board/mapper/ReplyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/board/mapper/ReplyMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,30 +65,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/cheoho-hi/Documents/GitHub/classproject/spring/intellij/BasicBoard/src/main/webapp/WEB-INF/views/board&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;226160abf295f1e4df3fa7af26b90864&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/cheoho-hi/Documents/GitHub/classproject/spring/intellij/BasicBoard/src/main/resources/mappers",
+    "spring.configuration.checksum": "226160abf295f1e4df3fa7af26b90864"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.app.board.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\cheoho-hi\Documents\GitHub\classproject\spring\intellij\BasicBoard\src\main\resources\mappers" />
       <recent name="C:\Users\cheoho-hi\Documents\GitHub\classproject\spring\intellij\BasicBoard\src\main\webapp\WEB-INF\views\board" />
       <recent name="C:\Users\cheoho-hi\Documents\GitHub\classproject\spring\intellij\BasicBoard\src\main\webapp\views\board" />
-      <recent name="C:\Users\cheoho-hi\Documents\GitHub\classproject\spring\intellij\BasicBoard\src\main\resources\mappers" />
       <recent name="C:\Users\cheoho-hi\Documents\GitHub\classproject\spring\intellij\BasicBoard\src\main\webapp\spring" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -203,7 +204,7 @@
       <updated>1669776996707</updated>
       <workItem from="1669776997999" duration="19312000" />
       <workItem from="1669853812866" duration="4434000" />
-      <workItem from="1669858436743" duration="16423000" />
+      <workItem from="1669858436743" duration="16653000" />
     </task>
     <servers />
   </component>

@@ -5,6 +5,7 @@ import com.app.board.domain.BoardDTO;
 import com.app.board.domain.ReplyDTO;
 import org.apache.ibatis.annotations.*;
 
+import java.sql.SQLException;
 import java.util.List;
 
 @Mapper
@@ -23,7 +24,7 @@ public interface BoardMapper {
     BoardDTO selectByBno(int bno);
 
     @Insert("insert into tbl_board (title, content, writer) values (#{title}, #{content}, #{writer})")
-    int insertBoardContent(BoardDTO boardDTO);
+    int insertBoardContent(BoardDTO boardDTO) throws SQLException;
 
     @Update("update tbl_board set title=#{title}, content=#{content}, writer=#{writer}, updatedate=now() where bno=#{bno}")
     int updateBoardArticle(BoardDTO boardDTO);

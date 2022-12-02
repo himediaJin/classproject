@@ -2,6 +2,7 @@ package com.app.board.controller.board;
 
 
 import com.app.board.domain.BoardDTO;
+import com.app.board.domain.BoardRegRequestDTO;
 import com.app.board.service.board.BoardRegService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,12 +25,12 @@ public class BoardRegController {
 
     @PostMapping
     public String reg(
-            BoardDTO boardDTO
+            BoardRegRequestDTO boardRegRequestDTO
     ){
 
-        log.info(boardDTO);
+        log.info(boardRegRequestDTO);
 
-        boardRegService.regBoardContent(boardDTO);
+        boardRegService.regBoardContent(boardRegRequestDTO);
 
         return "redirect:/board/list";
     }

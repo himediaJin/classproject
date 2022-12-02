@@ -5,16 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25064e6a-9d55-4917-9fea-9a4247ce51a2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/domain/BoardArticleDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/service/service/ReplyEditService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/board/domain/BoardRegRequestDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/board/controller/ReplyRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/board/controller/ReplyRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/board/domain/BoardListDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/board/domain/BoardListDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/board/controller/board/BoardRegController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/board/controller/board/BoardRegController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/board/domain/BoardDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/board/domain/BoardDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/board/mapper/BoardMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/board/mapper/BoardMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/board/mapper/ReplyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/board/mapper/ReplyMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/board/service/board/BoardListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/board/service/board/BoardListService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/board/service/board/BoardRegService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/board/service/board/BoardRegService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/reg.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/reg.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/view.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dept/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Dept/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dept/src/main/webapp/index2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Dept/src/main/webapp/index2.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +213,7 @@
       <workItem from="1669776997999" duration="19312000" />
       <workItem from="1669853812866" duration="4434000" />
       <workItem from="1669858436743" duration="21841000" />
-      <workItem from="1669940642075" duration="11612000" />
+      <workItem from="1669940642075" duration="18606000" />
     </task>
     <servers />
   </component>

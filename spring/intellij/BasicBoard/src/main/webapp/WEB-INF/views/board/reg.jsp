@@ -40,6 +40,10 @@
                     <label for="writer" class="form-label">작성자</label>
                     <input type="text" class="form-control" id="writer" name="writer">
                 </div>
+                <div class="mb-3">
+                    <label for="photo" class="form-label">작성자</label>
+                    <input type="file" class="form-control" id="photo" name="photo">
+                </div>
                 <div class="mb-3 text-end">
                     <button type="submit" class="btn btn-primary ">글 작성</button>
                 </div>

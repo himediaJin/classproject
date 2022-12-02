@@ -138,44 +138,103 @@
         const btn_editreply = document.querySelector('#btn_editreply')
 
         btn_editreply.addEventListener('click', () => {
-
-
-            const payload = {
-                bno : ${param.bno},
-                rno :  document.querySelector("#erno").value,
-                reply : document.querySelector("#editreply").value,
-                replyer : document.querySelector("#editreplyer").value,
-                replydate : document.querySelector("#editreplydate").value,
-            }
-
-            console.log(payload)
-
-            // 비동기 통신 : 댓글 등록
-            axios.put('/reply/'+payload.bno, payload)
-                .then(res => {
-                    console.log('res', res.data)
-                    const newReply = res.data
-
-                    //const tr_length = document.querySelectorAll('#replyList>tr').length
-                    //const trIndex = Number(document.querySelectorAll('#replyList>tr')[tr_length-1].getAttribute('tr-index'))+1
-                    /*const newTR = document.createElement('tr')
-                    let str = '' // '<td class="col-1">'+newReply.rno+'</td>'
-                    str += '<td class="col-2">'+newReply.replyer+'</td>'
-                    str += '<td class="col">'+newReply.reply+'</td>'
-                    str += '<td class="col-2">'+newReply.replydate+'</td>'
-                    str += '<td class="col-1"><a href="javascript: delTR('+newReply.rno+')" class="badge bg-danger text-decoration-none">x</a></td>'
-                    newTR.innerHTML = str
-                    newTR.setAttribute('class', 'fs-6 text-center')
-                    newTR.setAttribute('tr-index', newReply.rno)
-                    replyList.appendChild(newTR)
-
-                    document.querySelector("#reply").value = ''
-                    document.querySelector("#replyer").value = ''*/
-
-                })
-                .catch(err => console.log(err))
+            editReply()
         })
 
+        // 리스트 SET
+        setList()
+
+        ////////////////////////////////////
+
+        btn_reply.addEventListener('click', ()=>{
+            insertReply()
+        })
+    })
+
+
+    function insertReply(){
+        const payload = {
+            bno : ${param.bno},
+            reply : document.querySelector("#reply").value,
+            replyer : document.querySelector("#replyer").value,
+        }
+
+        console.log(payload)
+
+        // 비동기 통신 : 댓글 등록
+        axios.post('/reply', payload)
+            .then(res => {
+                console.log('res', res.data)
+                const newReply = res.data
+
+                //const tr_length = document.querySelectorAll('#replyList>tr').length
+                //const trIndex = Number(document.querySelectorAll('#replyList>tr')[tr_length-1].getAttribute('tr-index'))+1
+                const newTR = document.createElement('tr')
+                let str = '' // '<td class="col-1">'+newReply.rno+'</td>'
+                str += '<td class="col-2">'+newReply.replyer+'</td>'
+                str += '<td class="col">'+newReply.reply+'</td>'
+                str += '<td class="col-2">'+newReply.replydate+'</td>'
+                str += '<td class="col-2">' +
+                    '<a href="javascript: showEditModal('+newReply.rno+')" class="badge bg-warning text-decoration-none">edit</a> ' +
+                    '<a href="javascript: delTR('+newReply.rno+')" class="badge bg-danger text-decoration-none">delete</a>' +
+                    '</td>'
+                newTR.innerHTML = str
+                newTR.setAttribute('class', 'fs-6 text-center')
+                newTR.setAttribute('tr-index', newReply.rno)
+                replyList.appendChild(newTR)
+
+                document.querySelector("#reply").value = ''
+                document.querySelector("#replyer").value = ''
+
+            })
+            .catch(err => console.log(err))
+    }
+
+    function editReply(){
+
+        const payload = {
+            bno : ${param.bno},
+            rno :  document.querySelector("#erno").value,
+            reply : document.querySelector("#editreply").value,
+            replyer : document.querySelector("#editreplyer").value,
+            replydate : document.querySelector("#editreplydate").value,
+        }
+
+        console.log(payload)
+
+        // 비동기 통신 : 댓글 등록
+        axios.put('/reply/'+payload.bno, payload)
+            .then(res => {
+                console.log('res', res.data)
+                const newReply = res.data
+
+
+
+                const editTR = document.querySelector('tr[tr-index="'+payload.rno+'"]')
+
+                let str = '' // '<td class="col-1">'+newReply.rno+'</td>'
+                str += '<td class="col-2">'+newReply.replyer+'</td>'
+                str += '<td class="col">'+newReply.reply+'</td>'
+                str += '<td class="col-2">'+newReply.replydate+'</td>'
+                str += '<td class="col-2">' +
+                    '<a href="javascript: showEditModal('+newReply.rno+')" class="badge bg-warning text-decoration-none">edit</a> ' +
+                    '<a href="javascript: delTR('+newReply.rno+')" class="badge bg-danger text-decoration-none">delete</a>' +
+                    '</td>'
+                editTR.innerHTML = str
+                /*editTR.setAttribute('class', 'fs-6 text-center')
+                editTR.setAttribute('tr-index', newReply.rno)
+                replyList.appendChild(newTR)*/
+
+                document.querySelector("#editreply").value = ''
+                document.querySelector("#editreplyer").value = ''
+
+                myModal.hide()
+
+            })
+            .catch(err => console.log(err))
+    }
+
+    function setList(){
         // 비동기 통신 : 댓글 리스트 가져오기
         axios.get('/reply')
             .then(res => {
@@ -184,45 +243,7 @@
                 addReplyRow(res.data)
             })
             .catch(err => console.log(err))
-
-        ////////////////////////////////////
-
-        btn_reply.addEventListener('click', ()=>{
-
-            const payload = {
-                bno : ${param.bno},
-                reply : document.querySelector("#reply").value,
-                replyer : document.querySelector("#replyer").value,
-            }
-
-            console.log(payload)
-
-            // 비동기 통신 : 댓글 등록
-            axios.post('/reply', payload)
-                .then(res => {
-                    console.log('res', res.data)
-                    const newReply = res.data
-
-                    //const tr_length = document.querySelectorAll('#replyList>tr').length
-                    //const trIndex = Number(document.querySelectorAll('#replyList>tr')[tr_length-1].getAttribute('tr-index'))+1
-                    const newTR = document.createElement('tr')
-                    let str = '' // '<td class="col-1">'+newReply.rno+'</td>'
-                    str += '<td class="col-2">'+newReply.replyer+'</td>'
-                    str += '<td class="col">'+newReply.reply+'</td>'
-                    str += '<td class="col-2">'+newReply.replydate+'</td>'
-                    str += '<td class="col-1"><a href="javascript: delTR('+newReply.rno+')" class="badge bg-danger text-decoration-none">x</a></td>'
-                    newTR.innerHTML = str
-                    newTR.setAttribute('class', 'fs-6 text-center')
-                    newTR.setAttribute('tr-index', newReply.rno)
-                    replyList.appendChild(newTR)
-
-                    document.querySelector("#reply").value = ''
-                    document.querySelector("#replyer").value = ''
-
-                })
-                .catch(err => console.log(err))
-        })
-    })
+    }
 
     function showEditModal(rno){
         myModal.show();
@@ -238,7 +259,7 @@
 
     function addReplyRow(list){
 
-        console.log(list)
+        console.log(`결과가 ${list}`)
 
         list.forEach((reply, index) => {
             const newTR = document.createElement('tr')

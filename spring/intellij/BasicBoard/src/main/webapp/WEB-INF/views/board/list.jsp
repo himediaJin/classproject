@@ -41,7 +41,7 @@
                 <c:forEach items="${page.list}" var="board" varStatus="status">
                 <tr>
                     <th scope="row">${(page.totalCountOfArticle - (page.pageNum-1)*10 ) - status.index}</th>
-                    <td><a href="view?bno=${board.bno}">${board.title}</a></td>
+                    <td><a href="view?bno=${board.bno}">${board.title}</a> <span class="badge bg-danger">${board.replycnt}</span></td>
                     <td>${board.writer}</td>
                     <td>${board.regdate}</td>
                     <td>${board.updatedate}</td>
@@ -50,33 +50,42 @@
                 </tbody>
             </table>
 
+            <div class="text-end m-3">
+                <a href="/board/reg" class="btn btn-primary" role="button">글 작성</a>
+            </div>
             <%--pagination--%>
-            <nav aria-label="...">
-                <ul class="pagination">
+            <div class="container text-center ">
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <nav aria-label="...">
+                            <ul class="pagination">
 
-                    <c:if test="${page.pageNum > 10}">
-                    <li class="page-item disabled">
-                        <a class="page-link">&laquo;</a>
-                    </li>
-                    </c:if>
+                                <c:if test="${page.pageNum > 10}">
+                                    <li class="page-item disabled">
+                                        <a class="page-link">&laquo;</a>
+                                    </li>
+                                </c:if>
 
-                    <c:forEach var="num" begin="1" end="${page.totalCountOfPage}">
-                    <li class="page-item ${num eq page.pageNum ? 'active' : ''}" ><a class="page-link" href="?p=${num}">${num}</a></li>
-                    </c:forEach>
+                                <c:forEach var="num" begin="1" end="${page.totalCountOfPage}">
+                                    <li class="page-item ${num eq page.pageNum ? 'active' : ''}" ><a class="page-link" href="?p=${num}">${num}</a></li>
+                                </c:forEach>
 
-                    <c:if test="${page.pageNum < 10 and page.totalCountOfPage > 10}">
-                    <li class="page-item">
-                        <a class="page-link" href="#">&raquo;</a>
-                    </li>
-                    </c:if>
-                </ul>
-            </nav>
+                                <c:if test="${page.pageNum < 10 and page.totalCountOfPage > 10}">
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">&raquo;</a>
+                                    </li>
+                                </c:if>
+                            </ul>
+                        </nav>
+                    </div>
+
+                </div>
+
+            </div>
+
 
         </div>
 
-        <div class="text-end m-3">
-            <a href="/board/reg" class="btn btn-primary" role="button">글 작성</a>
-        </div>
 
     </div>
 

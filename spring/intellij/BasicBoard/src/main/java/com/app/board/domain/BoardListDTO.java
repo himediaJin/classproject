@@ -13,7 +13,7 @@ import java.util.List;
 public class BoardListDTO {
 
     private int pageNum;
-    private List<BoardDTO> list;
+    private List<BoardArticleDTO> list;
     private int totalCountOfArticle;
     private int totalCountOfPage;
 

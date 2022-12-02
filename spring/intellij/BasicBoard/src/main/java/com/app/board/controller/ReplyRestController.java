@@ -2,6 +2,7 @@ package com.app.board.controller;
 
 import com.app.board.domain.ReplyDTO;
 import com.app.board.service.service.ReplyDeleteService;
+import com.app.board.service.service.ReplyEditService;
 import com.app.board.service.service.ReplyInsertService;
 import com.app.board.service.service.ReplyListService;
 import lombok.extern.log4j.Log4j2;
@@ -31,6 +32,9 @@ public class ReplyRestController {
     @Autowired
     private ReplyInsertService replyInsertService;
 
+    @Autowired
+    private ReplyEditService replyEditService;
+
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<ReplyDTO>> selectAll(){
 
@@ -58,10 +62,28 @@ public class ReplyRestController {
 
         log.info(replyDTO);
 
-        replyInsertService.insertReply(replyDTO);
-
         replyDTO.setReplydate(LocalDate.now().toString());
         replyDTO.setUpdatedate(LocalDate.now().toString());
+        replyInsertService.insertReply(replyDTO);
+
+
+
+        log.info(replyDTO);
+
+        return new ResponseEntity<>(replyDTO, HttpStatus.OK);
+    }
+
+    @PutMapping("/{no}")
+    public ResponseEntity<ReplyDTO> editReply(
+            @PathVariable("no") int rno,
+            @RequestBody ReplyDTO replyDTO
+    ){
+
+        replyDTO.setRno(rno);
+
+        log.info(replyDTO);
+
+        replyEditService.editReply(replyDTO);
 
         log.info(replyDTO);
 
@@ -83,3 +105,4 @@ public class ReplyRestController {
     }
 
 }
+

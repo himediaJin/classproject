@@ -24,7 +24,7 @@ public interface ReplyMapper {
     @Options(useGeneratedKeys = true, keyProperty = "rno", keyColumn = "rno")
     int insertReply(ReplyDTO replyDTO);
 
-    @Update("update tbl_reply set bno=#{bno}, reply=#{reply}, replyer=#{replyer}, updatedate=now() where bno=#{rno}")
+    @Update("update tbl_reply set bno=#{bno}, reply=#{reply}, replyer=#{replyer}, updatedate=now() where rno=#{rno}")
     int updateReply(ReplyDTO replyDTO);
 
     @Delete("delete from tbl_reply where rno=#{rno}")

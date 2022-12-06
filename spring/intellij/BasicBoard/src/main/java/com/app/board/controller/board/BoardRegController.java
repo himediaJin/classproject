@@ -28,7 +28,7 @@ public class BoardRegController {
             BoardRegRequestDTO boardRegRequestDTO
     ){
 
-        log.info(boardRegRequestDTO);
+        log.info(boardRegRequestDTO);  // rno= 0
 
         boardRegService.regBoardContent(boardRegRequestDTO);
 

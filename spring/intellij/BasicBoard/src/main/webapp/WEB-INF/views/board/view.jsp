@@ -247,10 +247,12 @@
 
     function showEditModal(rno){
         myModal.show();
+
         const selectedTD = document.querySelectorAll('tr[tr-index="'+rno+'"] > td')
         console.log(selectedTD[0].textContent)
         console.log(selectedTD[1].textContent)
         console.log(selectedTD[2].textContent)
+
         document.querySelector('#erno').value = rno
         document.querySelector('#editreplyer').value = selectedTD[0].textContent
         document.querySelector('#editreply').value = selectedTD[1].textContent

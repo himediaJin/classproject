@@ -21,7 +21,7 @@ public interface ReplyMapper {
     ReplyDTO selectByRno(int rno);
 
     @Insert("insert into tbl_reply (bno, reply, replyer) values (#{bno}, #{reply}, #{replyer})")
-    @Options(useGeneratedKeys = true, keyProperty = "rno", keyColumn = "rno")
+    @Options(useGeneratedKeys = true, keyProperty = "rno", keyColumn = "rno")  // 새롭게 저장된 rno 값을  ReplyDTO setRno(새롭게 등록된 값)
     int insertReply(ReplyDTO replyDTO);
 
     @Update("update tbl_reply set bno=#{bno}, reply=#{reply}, replyer=#{replyer}, updatedate=now() where rno=#{rno}")

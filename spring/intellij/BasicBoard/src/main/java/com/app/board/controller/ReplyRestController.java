@@ -60,11 +60,13 @@ public class ReplyRestController {
     ){
 
 
-        log.info(replyDTO);
+        log.info(replyDTO);     // rno=0
 
         replyDTO.setReplydate(LocalDate.now().toString());
         replyDTO.setUpdatedate(LocalDate.now().toString());
         replyInsertService.insertReply(replyDTO);
+
+        // rno = 새롭게 저장된 값을 가지고 있다!!
 
 
 

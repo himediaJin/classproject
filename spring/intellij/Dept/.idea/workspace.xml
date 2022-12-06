@@ -5,9 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="278edea4-c0f2-4edf-8381-4b31395821b0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/java/com/first/app/FirstBootAppApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/src/test/java/com/first/app/FirstBootAppApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BasicBoard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BasicBoard/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BasicBoard/src/main/java/com/app/board/controller/ReplyRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BasicBoard/src/main/java/com/app/board/controller/ReplyRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BasicBoard/src/main/java/com/app/board/controller/board/BoardRegController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BasicBoard/src/main/java/com/app/board/controller/board/BoardRegController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BasicBoard/src/main/java/com/app/board/mapper/ReplyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BasicBoard/src/main/java/com/app/board/mapper/ReplyMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BasicBoard/src/main/java/com/app/board/service/service/ReplyInsertService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BasicBoard/src/main/java/com/app/board/service/service/ReplyInsertService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BasicBoard/src/main/webapp/WEB-INF/views/board/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../BasicBoard/src/main/webapp/WEB-INF/views/board/view.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index2.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +95,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;18b1b63f8c34707921ec5027ed5699f3&quot;
   }
 }</component>
@@ -341,6 +357,8 @@
       <workItem from="1669861658131" duration="1678000" />
       <workItem from="1669872000528" duration="1392000" />
       <workItem from="1669961997188" duration="887000" />
+      <workItem from="1670285871489" duration="135000" />
+      <workItem from="1670286028628" duration="3160000" />
     </task>
     <servers />
   </component>

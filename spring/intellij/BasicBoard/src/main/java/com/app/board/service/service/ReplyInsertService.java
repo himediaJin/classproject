@@ -11,8 +11,8 @@ public class ReplyInsertService {
     @Autowired(required = false)
     private ReplyMapper replyMapper;
 
-    public int insertReply(ReplyDTO replyDTO){
-        return replyMapper.insertReply(replyDTO);
+    public int insertReply(ReplyDTO replyDTO){   // rno=0
+        return replyMapper.insertReply(replyDTO);   // rno=새롭게 등록된 값
     }
 
 }

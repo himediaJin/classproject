@@ -5,23 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="278edea4-c0f2-4edf-8381-4b31395821b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/java/com/first/app/controller/ExampleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/java/com/first/app/controller/IndexController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/java/com/first/app/domain/DeptDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/java/com/first/app/mapper/DeptMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/java/com/first/app/service/DeptDeleteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/java/com/first/app/service/DeptEditService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/java/com/first/app/service/DeptListService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/java/com/first/app/service/DeptReadService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/java/com/first/app/service/DeptRegService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/resources/mybatis/mapper/DeptMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/resources/templates/ex/ex1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/resources/templates/hello.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/src/test/java/com/first/app/MapperTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/src/test/java/com/first/app/connectionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../boot/FirstBootApp/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/java/com/first/app/FirstBootAppApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/java/com/first/app/FirstBootAppApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/java/com/first/app/controller/ExampleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/java/com/first/app/controller/ExampleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/resources/templates/ex/ex1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/resources/templates/ex/ex1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

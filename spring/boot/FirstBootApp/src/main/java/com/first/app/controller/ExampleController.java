@@ -9,6 +9,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpSession;
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -26,7 +28,9 @@ public class ExampleController {
 
 
     @GetMapping("/ex1")
-    public String ex1(Model model){
+    public String ex1(
+            Model model,
+            HttpSession httpSession){
 
         List<String> list = Arrays.asList("aaa", "bbb", "ccc", "ddd");
 
@@ -41,6 +45,13 @@ public class ExampleController {
         map.put("20", deptReadService.getDept(20));
 
         model.addAttribute("deptMap", map);
+
+        httpSession.setAttribute("loginData", "COOL");
+
+        model.addAttribute("localDateTime", LocalDateTime.now());
+
+        model.addAttribute("data", "DATA123");
+        model.addAttribute("nullData", null);
 
 
         return "ex/ex1";    // ex/ex1.html

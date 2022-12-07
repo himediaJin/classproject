@@ -5,11 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="278edea4-c0f2-4edf-8381-4b31395821b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/resources/templates/fragment/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/resources/templates/fragment/hello.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/java/com/first/app/controller/ExampleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/java/com/first/app/controller/ExampleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/resources/templates/ex/ex1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/resources/templates/ex/ex1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/SpringBootBoardApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/domain/BoardDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/mapper/BoardMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/test/java/com/app/board/ConnectionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/test/java/com/app/board/SpringBootBoardApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BasicBoard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BasicBoard/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -347,7 +356,7 @@
       <workItem from="1669961997188" duration="887000" />
       <workItem from="1670285871489" duration="135000" />
       <workItem from="1670286028628" duration="7565000" />
-      <workItem from="1670372463813" duration="599000" />
+      <workItem from="1670372463813" duration="601000" />
     </task>
     <servers />
   </component>

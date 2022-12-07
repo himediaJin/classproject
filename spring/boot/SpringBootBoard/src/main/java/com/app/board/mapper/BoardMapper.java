@@ -17,4 +17,7 @@ public interface BoardMapper {
     List<BoardDTO> selectList(@Param("start") int start, @Param("count") int count);
 
 
+    @Select("select count(*) from tbl_board")
+    Integer totalCount();
+
 }

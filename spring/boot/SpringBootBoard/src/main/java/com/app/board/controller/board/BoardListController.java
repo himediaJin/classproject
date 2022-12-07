@@ -19,5 +19,6 @@ public class BoardListController {
             Model model
     ){
         model.addAttribute("boardList", boardListService.getList(pageNum));
+        model.addAttribute("listPage", boardListService.getPage(pageNum));
     }
 }

@@ -54,6 +54,9 @@ public class ExampleController {
         model.addAttribute("nullData", null);
 
 
+
+
+
         return "ex/ex1";    // ex/ex1.html
     }
 }

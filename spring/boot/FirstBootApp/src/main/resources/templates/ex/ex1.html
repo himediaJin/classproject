@@ -3,95 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <style>
+        .title {
+            color: red;
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
+
 </head>
 <body>
 
-    <h1>연산자</h1>
+    <h1>모듈화 : insert</h1>
+    <div th:insert="~{fragment/footer :: copy}"></div>
+    <div th:insert="fragment/footer :: copy"></div>
+
+    <div th:replace="fragment/footer :: copy"></div>
+
+    <div th:replace="fragment/footer :: copyParam ('전화번호 : 070-1111-7777', '이메일 : king@gmail.com')"></div>
+
+
+
+
+
+<h1>반복문</h1>
+<h3>부서 리스트</h3>
+
+
+<table border="1">
+    <tr>
+        <th>부서번호</th>
+        <th>부서이름</th>
+        <th>부서위치</th>
+    </tr>
+
+    <th:block th:each="dept : ${deptList}">
+        <tr>
+            <td th:text="${dept.deptno}"></td>
+            <td>[[${dept.dname}]]</td>
+            <td th:text="${dept.loc}"></td>
+        </tr>
+    </th:block>
+
+</table>
+
+<table border="1">
+    <tr>
+        <th>index</th>
+        <th>count</th>
+        <th>부서번호</th>
+        <th>부서이름</th>
+        <th>부서위치</th>
+    </tr>
+    <tr th:each="dept, deptStat : ${deptList}" th:object="${dept}">
+        <td th:text="${deptStat.index}"></td>
+        <td th:text="${deptStat.count}"></td>
+        <td th:text="*{deptno}"></td>
+        <td th:text="*{dname}"></td>
+        <td th:text="*{loc}"></td>
+    </tr>
+</table>
+
+<table border="1">
+    <tr>
+        <th>index</th>
+        <th>count</th>
+        <th>부서번호</th>
+        <th>부서이름</th>
+        <th>부서위치</th>
+    </tr>
+    <tr th:each="dept, deptStat : ${deptList}">
+        <td th:text="${deptStat.index}"></td>
+        <td th:text="${deptStat.count}"></td>
+        <td th:text="${dept.deptno}"></td>
+        <td>[[${dept.dname}]]</td>
+        <td th:text="${dept.loc}"></td>
+    </tr>
+</table>
+
+<table border="1">
+    <tr>
+        <th>부서번호</th>
+        <th>부서이름</th>
+        <th>부서위치</th>
+    </tr>
+    <tr th:each="dept : ${deptList}">
+        <td th:text="${dept.deptno}"></td>
+        <td>[[${dept.dname}]]</td>
+        <td th:text="${dept.loc}"></td>
+    </tr>
+</table>
+
+
+<h1>조건식</h1>
+<div th:with="age=${30}">
     <ul>
-        <li> 10 + 20 = <span th:text="${10 + 20}"></span> </li>
-        <li> 10 > 20 = <span th:text="${10>20}"></span></li>
-        <li> 10 % 2 == 0 ? '짝수' : '홀수' => <span th:text="${10%2==0?'짝수':'홀수'}"></span> </li>
+        <li><span th:text="${age}"></span></li>
         <li>
-            ${data}?:'데이터가 없습니다.' => <span th:text="${data}?:'데이터가 없습니다.!!!'"></span> <br>
-            ${nullData}?:'데이터가 없습니다.' => <span th:text="${nullData}?:'데이터가 없습니다.!!!'"></span>
+            <span th:text="성년" th:if="${age > 19}"></span>
+            <span th:text="미성년" th:unless="${age > 19}"></span>
         </li>
-        <li>
-            ${data}?:_ => <span th:text="${data}?:_">데이터가 없습니다.</span> <br>
-            ${nullData}?:_ => <span th:text="${nullData}?:_">데이터가 없습니다.</span>
+        <li th:switch="${age}">
+            <span th:case="15">15살</span>
+            <span th:case="20">20살</span>
+            <span th:case="25">25살</span>
+            <span th:case="*">기타</span>
         </li>
     </ul>
 
+    <!--분기 / 반복-->
+    <th:block th:if="${age>19}">
+        <div>성인입니다.</div>
+        <div>음주가 가능합니다.</div>
+        <div>술집에는 출입이 가능합니다.</div>
+    </th:block>
 
-    <h1>URI 경로 표현 : @{}</h1>
+
+</div>
+
+
+<h1>속성의 추가/변경</h1>
+<ul>
+    <li><span> 안녕하세요 </span></li>
+    <li><span th:class="${'title'}"> 안녕하세요 </span></li>
+    <li><span class="sub" th:class="${'title'}"> 안녕하세요 </span></li>
+    <li><span class="sub" th:class="${'title'}"> 안녕하세요 </span></li>
+    <li><span class="sub" th:attrappend="class=${' title'}"> 안녕하세요 </span></li>
+    <li><span class="sub" th:attrprepend="class=${' title '}"> 안녕하세요 </span></li>
+    <li><span class="sub" th:classappend="${'title'}"> 안녕하세요 </span></li>
+    <li> checked</li>
+    <li><input type="checkbox" name="aaa" th:checked="true"></li>
+    <li><input type="checkbox" name="aaa" th:checked="false"></li>
+    <li><input type="checkbox" name="aaa" th:checked="${10>1}"></li>
+</ul>
+
+
+<h1>연산자</h1>
+<ul>
+    <li> 10 + 20 = <span th:text="${10 + 20}"></span></li>
+    <li> 10 > 20 = <span th:text="${10>20}"></span></li>
+    <li> 10 % 2 == 0 ? '짝수' : '홀수' => <span th:text="${10%2==0?'짝수':'홀수'}"></span></li>
+    <li>
+        ${data}?:'데이터가 없습니다.' => <span th:text="${data}?:'데이터가 없습니다.!!!'"></span> <br>
+        ${nullData}?:'데이터가 없습니다.' => <span th:text="${nullData}?:'데이터가 없습니다.!!!'"></span>
+    </li>
+    <li>
+        ${data}?:_ => <span th:text="${data}?:_">데이터가 없습니다.</span> <br>
+        ${nullData}?:_ => <span th:text="${nullData}?:_">데이터가 없습니다.</span>
+    </li>
+</ul>
+
+
+<h1>URI 경로 표현 : @{}</h1>
+<ul>
+    <li><span th:text="@{/dept/list}"></span></li>
+    <li><span th:text="@{/dept/list(searchType=${'dname'}, keyword=${'AC'})}"> </span></li>
+    <li><span th:text="@{/dept/list/{param1}(param1=${10})}"> </span></li>
+    <li><a th:href="@{/dept/list}">LINK1</a></li>
+    <li><a th:href="@{/dept/list(searchType=${'dname'}, keyword=${'AC'})}">LINK2</a></li>
+    <li><a th:href="@{/dept/list/{param1}(param1=${10})}">LINK3</a></li>
+</ul>
+
+<h1>LocalDateTime 객체의 포맷팅</h1>
+<ul>
+    <li>현재 시간 출력 : <span th:text="${localDateTime}"></span></li>
+    <li>yyyy-MM-dd HH:mm:ss : <span th:text="${#temporals.format(localDateTime, 'yyyy. MM. dd. HH:mm:ss')}"></span></li>
+    <li>yyyy-MM-dd/a hh:mm : <span th:text="${#temporals.format(localDateTime, 'yyyy-MM-dd/a hh:mm')}"></span></li>
+</ul>
+
+<h1>param, session의 속성</h1>
+<ul>
+    <li>요청 파라미터 type = <span th:text="${param.type}"></span></li>
+    <li>세션의 속성 값 loginData : <span th:text="${session.loginData}"></span></li>
+</ul>
+
+
+<h1>지역 변수 선언과 활용</h1>
+<div th:with="item=${deptList[3]}">
     <ul>
-        <li> <span th:text="@{/dept/list}"></span>  </li>
-        <li> <span th:text="@{/dept/list(searchType=${'dname'}, keyword=${'AC'})}"> </span> </li>
-        <li> <span th:text="@{/dept/list/{param1}(param1=${10})}"> </span> </li>
-        <li> <a th:href="@{/dept/list}">LINK1</a>  </li>
-        <li> <a th:href="@{/dept/list(searchType=${'dname'}, keyword=${'AC'})}">LINK2</a> </li>
-        <li> <a th:href="@{/dept/list/{param1}(param1=${10})}">LINK3</a> </li>
+        <li>부서번호 : <span th:text="${item.deptno}">0</span></li>
+        <li>부서이름 : <span th:text="${item.dname}">text</span></li>
+        <li>부서위치 : <span th:text="${item.loc}"></span></li>
     </ul>
-
-    <h1>LocalDateTime 객체의 포맷팅</h1>
-    <ul>
-        <li>현재 시간 출력 : <span th:text="${localDateTime}"></span></li>
-        <li>yyyy-MM-dd HH:mm:ss : <span th:text="${#temporals.format(localDateTime, 'yyyy. MM. dd. HH:mm:ss')}"></span></li>
-        <li>yyyy-MM-dd/a hh:mm : <span th:text="${#temporals.format(localDateTime, 'yyyy-MM-dd/a hh:mm')}"></span></li>
-    </ul>
-
-    <h1>param, session의 속성</h1>
-    <ul>
-        <li>요청 파라미터 type = <span th:text="${param.type}"></span></li>
-        <li>세션의 속성 값 loginData : <span th:text="${session.loginData}"></span></li>
-    </ul>
+</div>
 
 
-    <h1>지역 변수 선언과 활용</h1>
-    <div th:with="item=${deptList[3]}">
-        <ul>
-            <li>부서번호 : <span th:text="${item.deptno}">0</span></li>
-            <li>부서이름 : <span th:text="${item.dname}">text</span></li>
-            <li>부서위치 : <span th:text="${item.loc}"></span></li>
-        </ul>
-    </div>
+<h1>Map 객체 접근</h1>
+<ul>
+    <li>10번 부서 : [[${deptMap['10']}]]</li>
+    <li>20번 부서 : [[${deptMap['20']}]]</li>
+    <li>10번 부서의 이름 : [[${deptMap['10'].dname}]]</li>
+    <li>20번 부서의 이름 : [[${deptMap['20'].dname}]]</li>
+    <li>20번 부서의 이름 : <span th:text="${deptMap['20'].dname}"></span></li>
+</ul>
+
+<h1>List 객체 접근</h1>
+<ul>
+    <li>첫번째 부서 : [[${deptList[0]}]]</li>
+    <li>첫번째 부서의 이름 : [[${deptList[0].dname}]]</li>
+    <li>첫번째 부서의 이름 : <span th:text="${deptList[0].dname}"></span></li>
+</ul>
 
 
-    <h1>Map 객체 접근</h1>
-    <ul>
-        <li>10번 부서 : [[${deptMap['10']}]] </li>
-        <li>20번 부서 : [[${deptMap['20']}]] </li>
-        <li>10번 부서의 이름 : [[${deptMap['10'].dname}]] </li>
-        <li>20번 부서의 이름 : [[${deptMap['20'].dname}]] </li>
-        <li>20번 부서의 이름 : <span th:text="${deptMap['20'].dname}"></span> </li>
-    </ul>
+<h1>객체 출력하는 표현식</h1>
+<ul>
+    <li>부서이름 : [[${dept.dname}]]</li>
+    <li th:text="${dept.dname}"></li>
+    <li>부서이름 : <span th:text="${dept.dname}"></span></li>
+    <li th:text="${'부서이름 : ' + dept.dname}"></li>
+</ul>
 
-    <h1>List 객체 접근</h1>
-    <ul>
-        <li>첫번째 부서 : [[${deptList[0]}]]</li>
-        <li>첫번째 부서의 이름 : [[${deptList[0].dname}]] </li>
-        <li>첫번째 부서의 이름 : <span th:text="${deptList[0].dname}"></span></li>
-    </ul>
+<span th:text="${list}"></span>
+<hr>
+<h4> [[${list}]] </h4>
 
 
+<script th:inline="javascript">
 
-    <h1>객체 출력하는 표현식</h1>
-    <ul>
-        <li>부서이름 : [[${dept.dname}]]</li>
-        <li th:text="${dept.dname}"></li>
-        <li>부서이름 : <span th:text="${dept.dname}"></span> </li>
-        <li th:text="${'부서이름 : ' + dept.dname}"></li>
-    </ul>
+    let deptno = [[${deptList[0].deptno}]] ;
+    let dname = [[${deptList[0].dname}]] ;
+    let loc = [[${deptList[0].loc}]] ;
+
+    // 객체 => JSON
+    let dept = '[[${dept}]]' ;
+    let deptList = '[[${deptList}]]' ;
+
+    let deptObj = JSON.parse(dept);
+    let deptListObj = JSON.parse(deptList);
+
+    console.log('deptno', deptno)
+    console.log('dname', dname)
+    console.log('loc', loc)
+
+    console.log('deptObj', deptObj)
+    console.log('deptListObj', deptListObj)
+
+</script>
 
 
-
-
-
-
-
-
-    <span th:text="${list}"></span>
-    <hr>
-    <h4> [[${list}]] </h4>
 
 </body>
 </html>

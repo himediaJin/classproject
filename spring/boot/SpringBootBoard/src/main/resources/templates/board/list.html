@@ -18,8 +18,6 @@
     </div>
     <div class="card-body">
 
-      <div th:text="${listPage}"></div>
-
       <table class="table  table-bordered text-center">
         <thead class="bg-primary text-white">
           <tr>
@@ -31,7 +29,7 @@
         </thead>
 
         <tbody>
-          <tr th:each="board : ${boardList}">
+          <tr th:each="board : ${listPage.list}">
             <td th:text="${board.bno}">1</td>
             <td th:text="${board.title}">테스트</td>
             <td th:text="${board.writer}">테스트 작성</td>
@@ -44,22 +42,33 @@
       <nav aria-label="">
         <ul class="pagination">
 
-          <li class="page-item disabled">
-            <a class="page-link">&laquo;</a>
+          <th:block th:if="${listPage.prev}">
+          <li class="page-item">
+            <a class="page-link" th:href="@{/board/list(p=${listPage.startNum-1})}">&laquo;</a>
           </li>
+          </th:block>
 
 
 
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item active" aria-current="page">
+          <th:block th:each="num : ${#numbers.sequence(listPage.startNum, listPage.endNum)}">
+          <li class="page-item">
+            <a class="page-link" th:href="@{/board/list(p=${num})}" th:text="${num}"></a>
+          </li>
+          </th:block>
+
+          <!--<li class="page-item active">
             <a class="page-link" href="#">2</a>
           </li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-
-
           <li class="page-item">
-            <a class="page-link" href="#">&raquo;</a>
+            <a class="page-link" href="#">3</a>
+          </li>-->
+
+
+          <th:block th:if="${listPage.next}">
+          <li class="page-item">
+            <a class="page-link" th:href="@{/board/list(p=${listPage.endNum+1})}">&raquo;</a>
           </li>
+          </th:block>
 
 
         </ul>

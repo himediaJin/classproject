@@ -1,6 +1,7 @@
 package com.app.board.controller.board;
 
 import com.app.board.domain.BoardEditRequest;
+import com.app.board.service.BoardEditService;
 import com.app.board.service.BoardViewService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,9 @@ public class BoardEditController {
 
     @Autowired
     private BoardViewService boardViewService;
+
+    @Autowired
+    private BoardEditService boardEditService;
 
     @GetMapping
     public void edtiForm(
@@ -41,6 +45,8 @@ public class BoardEditController {
 
         redirectAttributes.addAttribute("bno", boardEditRequest.getBno());
         redirectAttributes.addAttribute("p", boardEditRequest.getCurPageNum());
+
+        boardEditService.edit(boardEditRequest);
 
         return "redirect:/board/view";
 

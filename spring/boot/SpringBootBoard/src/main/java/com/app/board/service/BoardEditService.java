@@ -10,6 +10,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.UUID;
 
 @Service
@@ -29,7 +30,6 @@ public class BoardEditService {
         if(file != null && !file.isEmpty()) {
 
             // 새로운 파일을 저장
-
             String absolutePath = new File("").getAbsolutePath();
             log.info(absolutePath);
 
@@ -51,25 +51,55 @@ public class BoardEditService {
             try {
                 // 파일 저장
                 file.transferTo(newFile);
+                log.info("newFileName >>>>>>>>>>> " + newFileName);
             } catch (IOException e) {
+
+                log.info("IOException ... ");
                 throw new RuntimeException(e);
             }
 
         }
 
-        // db update
+
         BoardDTO boardDTO = boardEditRequest.toBoardDTO();
         if(newFileName != null){
             boardDTO.setPhoto(newFileName);
         }
 
+        log.info(boardDTO);
+
+        int result = 0;
 
 
+        try {
+            // db update
+            result = boardMapper.update(boardDTO);
 
-        // 새로운 파일이 저장 되고 이전 파일이 존재한다면 ! -> 이전 파일을 삭제
+            // 새로운 파일이 저장 되고 이전 파일이 존재한다면 ! -> 이전 파일을 삭제
+            String oldFileName = boardEditRequest.getOldFile();
+            if(newFileName !=null && oldFileName != null && !oldFileName.isEmpty()){
+                File delOldFile = new File(saveDir,oldFileName);
+                if(delOldFile.exists()){
+                    delOldFile.delete();
+                    log.info(oldFileName + " 파일 삭제  ");
+                }
+            }
 
 
-        return 0;
+        } catch (SQLException e) {
+
+            log.info("SQLException ....");
+            // 새롭게 저장된 파일 삭제
+            if(newFileName!=null){
+                File delFile = new File(saveDir, newFileName);
+                if(delFile.exists()){
+                    // 파일 삭제
+                    delFile.delete();
+                }
+            }
+        }
+
+        return result;
 
     }
 

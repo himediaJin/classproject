@@ -63,9 +63,11 @@ public class BoardWriteService {
             boardDTO.setPhoto(newFileName);
         }
 
+        int result = 0;
+
         try {
             // DB insert
-            boardMapper.insert(boardDTO);
+            result = boardMapper.insert(boardDTO);
         } catch (SQLException e){
             if(newFileName!=null){
                 File delFile = new File(saveDir, newFileName);
@@ -76,7 +78,7 @@ public class BoardWriteService {
             }
         }
 
-        return 0;
+        return result;
     }
 
 }

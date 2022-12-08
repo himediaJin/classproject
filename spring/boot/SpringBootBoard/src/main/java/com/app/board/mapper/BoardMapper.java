@@ -29,6 +29,6 @@ public interface BoardMapper {
     Integer deleteByBno(int bno);
 
     @Update("update tbl_board set title=#{title}, content=#{content}, writer=#{writer}, photo=#{photo}, updatedate=now() where bno=#{bno}")
-    Integer update(BoardDTO boardDTO);
+    Integer update(BoardDTO boardDTO) throws SQLException;
 
 }

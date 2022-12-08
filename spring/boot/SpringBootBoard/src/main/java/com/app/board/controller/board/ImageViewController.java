@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.io.File;
+import java.io.*;
 
 @Controller
 @Log4j2
@@ -19,16 +19,23 @@ public class ImageViewController {
     @ResponseBody
     public ResponseEntity<byte[]> viewImage(
             @PathVariable("fileName") String fileName
-    ){
+    ) throws IOException {
 
         log.info(" ImageView Controller ...");
+
+        byte[] imageByteArray = null;
+        HttpStatus status = HttpStatus.NOT_FOUND;
+
 
         File savedFile = new File(new File("").getAbsolutePath(), "photo\\"+fileName);
 
         if(savedFile.exists()){
             // 응답 처리
+            InputStream imageStream = new FileInputStream(savedFile);
+            imageByteArray = imageStream.readAllBytes();
+            status = HttpStatus.OK;
         }
 
-        return new ResponseEntity<byte[]>(null, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<byte[]>(imageByteArray, status);
     }
 }

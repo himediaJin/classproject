@@ -1,10 +1,7 @@
 package com.app.board.mapper;
 
 import com.app.board.domain.BoardDTO;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -27,5 +24,8 @@ public interface BoardMapper {
 
     @Insert("insert into tbl_board (title, content, writer, photo) values (#{title}, #{content}, #{writer}, #{photo})")
     Integer insert(BoardDTO boardDTO) throws SQLException;
+
+    @Delete("delete from tbl_board where bno=#{bno}")
+    Integer deleteByBno(int bno);
 
 }

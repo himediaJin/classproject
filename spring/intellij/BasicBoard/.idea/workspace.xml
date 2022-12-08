@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25064e6a-9d55-4917-9fea-9a4247ce51a2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/photo/98310628-055d-4ecb-bbee-5f661278c882photo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/controller/board/BoardViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/controller/board/ImageViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/service/BoardViewService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/resources/templates/board/view.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../boot/SpringBootBoard/photo/photo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../boot/SpringBootBoard/photo/프로젝트 팀.JPG" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/controller/board/BoardDeleteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/service/BoardDeleteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/controller/board/ImageViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/controller/board/ImageViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/mapper/BoardMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/mapper/BoardMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/resources/templates/board/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/resources/templates/board/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/resources/templates/board/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/resources/templates/board/view.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -216,7 +212,7 @@
       <workItem from="1670199509924" duration="9897000" />
       <workItem from="1670285858253" duration="37000" />
       <workItem from="1670382534775" duration="2761000" />
-      <workItem from="1670461418905" duration="658000" />
+      <workItem from="1670461418905" duration="1257000" />
     </task>
     <servers />
   </component>

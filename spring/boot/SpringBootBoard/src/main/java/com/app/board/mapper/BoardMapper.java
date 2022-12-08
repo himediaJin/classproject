@@ -28,4 +28,7 @@ public interface BoardMapper {
     @Delete("delete from tbl_board where bno=#{bno}")
     Integer deleteByBno(int bno);
 
+    @Update("update tbl_board set title=#{title}, content=#{content}, writer=#{writer}, photo=#{photo}, updatedate=now() where bno=#{bno}")
+    Integer update(BoardDTO boardDTO);
+
 }

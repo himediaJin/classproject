@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25064e6a-9d55-4917-9fea-9a4247ce51a2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/photo/5184dc4f-e57c-4639-b38d-adf5ee0cca86photo2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/photo/e56ca9a5-b6c8-48fd-b79b-b6fd4a043ee7photo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../boot/SpringBootBoard/photo/98310628-055d-4ecb-bbee-5f661278c882photo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/controller/board/BoardEditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/controller/board/BoardEditController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/mapper/BoardMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/mapper/BoardMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/SpringBootBoard/photo/5184dc4f-e57c-4639-b38d-adf5ee0cca86photo2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/SpringBootBoard/photo/e56ca9a5-b6c8-48fd-b79b-b6fd4a043ee7photo.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/service/BoardDeleteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/service/BoardDeleteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/service/BoardEditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/service/BoardEditService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/service/BoardWriteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/service/BoardWriteService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

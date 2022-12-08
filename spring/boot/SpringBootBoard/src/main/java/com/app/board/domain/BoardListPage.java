@@ -51,6 +51,9 @@ public class BoardListPage {
 
         // 끝번호
         this.endNum = (int)(Math.ceil((this.pageNum * 1.0) / 10)) * 10;    // 11 -> 11.0 / 10 -> 1.1 -> 2.0 -> 2 * 10
+        // 1-5     : 5
+        // 6-10    : 10
+        // 11-15   : 15
         // 시작번호
         this.startNum = this.endNum-9;
 
@@ -63,7 +66,7 @@ public class BoardListPage {
         // 이전 구간으로 이동가능한지
         this.prev = this.startNum > 1;
 
-        // 다음 구간으로 이동 가능한지
+        // 다음 구간 으로 갈수 있는지
         this.next = this.endNum < realEndNum;
     }
 }

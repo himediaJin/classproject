@@ -1,6 +1,7 @@
 package com.app.board.controller.board;
 
 import com.app.board.domain.ReplyDTO;
+import com.app.board.service.ReplyDeleteService;
 import com.app.board.service.ReplyInsertService;
 import com.app.board.service.ReplyListService;
 import com.app.board.service.ReplyReadService;
@@ -27,6 +28,9 @@ public class ReplyRestController {
 
     @Autowired
     private ReplyReadService replyReadService;
+
+    @Autowired
+    private ReplyDeleteService replyDeleteService;
 
     // get  /reply/{bno} => list
     @GetMapping(value = "/{bno}",produces = MediaType.APPLICATION_JSON_VALUE)
@@ -61,14 +65,15 @@ public class ReplyRestController {
 
     }
 
-
-
-
-
-
-
     // put  /reply/{rno} => reply
-    // delete /reply/{rno} => 0 / 1, ok, fail
+
+    // delete /reply/{rno} => 0 / 1, success, fail
+    @DeleteMapping("/{rno}")
+    public ResponseEntity<Integer> delete(
+            @PathVariable("rno") int rno
+    ){
+        return new ResponseEntity<>(replyDeleteService.deleteByRno(rno), HttpStatus.OK);
+    }
 
 
 

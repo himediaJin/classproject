@@ -1,10 +1,7 @@
 package com.app.board.mapper;
 
 import com.app.board.domain.ReplyDTO;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Options;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -23,6 +20,8 @@ public interface ReplyMapper {
     @Options(useGeneratedKeys = true, keyProperty = "rno", keyColumn = "rno")
     int insertReply(ReplyDTO replyDTO);
 
+    @Delete("delete from tbl_reply where rno=#{rno}")
+    int deleteByRno(int rno);
 
 
 }

@@ -67,28 +67,26 @@
 
           <!--댓글 작성 영역-->
 
+          <div class="p-3 border-bottom">
+            <h5 class="title my-2">댓글 작성</h5>
+            <div class="mb-3">
+              <label class="form-label">작성자</label>
+              <input type="text" class="form-control" id="replyer">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">내용</label>
+              <textarea class="form-control" rows="3" id="reply"></textarea>
+            </div>
+            <div class="mb-3">
+              <input type="submit" value="등록" id="btn_reply" class="form-control btn btn-primary">
+            </div>
+          </div>
+
 
           <!--댓글 리스트 영역-->
           <table class="table">
             <tbody id="replyList">
-              <tr>
-                <td>작성자</td>
-                <td>댓글 내용</td>
-                <td>작성일</td>
-                <td> 수정 | 삭제 </td>
-              </tr>
-              <tr>
-                <td>작성자</td>
-                <td>댓글 내용</td>
-                <td>작성일</td>
-                <td> 수정 | 삭제 </td>
-              </tr>
-              <tr>
-                <td>작성자</td>
-                <td>댓글 내용</td>
-                <td>작성일</td>
-                <td> 수정 | 삭제 </td>
-              </tr>
+
             </tbody>
           </table>
 
@@ -125,9 +123,69 @@
 
   <script>
 
+    let replyList;
+
     document.addEventListener('DOMContentLoaded', () => {
 
-      let replyList = document.querySelector('#replyList')
+      // 댓글 리스트 출력 영역 캐스팅
+      replyList = document.querySelector('#replyList')
+
+      // 댓글 작성 버튼
+      const btn_reply = document.querySelector("#btn_reply")
+
+
+      // 버튼 이벤트 등록
+      btn_reply.addEventListener('click', () => {
+
+        // 서버로 전송할 payload
+        const payload = {
+          bno : bno,
+          reply : document.querySelector("#reply").value,
+          replyer : document.querySelector("#replyer").value
+        }
+
+        console.log("payload", payload)
+
+        axios.post('/reply', payload)
+                .then(res => {
+
+                  console.log('post->response', res.data)
+
+                  const reply = res.data
+
+                  // replyList 영역에 새로운 tr을 추가
+
+                  const newTR = document.createElement('tr')
+
+                  let html = '<td class="col-2">'+reply.replyer+'</td>'
+                  html += '<td class="col">'+reply.reply+'</td>'
+                  html += '<td class="col-2">'+reply.replydate+'</td>'
+                  html += '<td class="col-2"> ' +
+                          '<a href="javascript:showEditModal('+reply.rno+')" class="badge bg-warning text-decoration-none">수정</a> ' +
+                          '<a href="javascript:deleteReply('+reply.rno+')" class="badge bg-danger text-decoration-none">삭제</a> ' +
+                          '</td>'
+
+                  newTR.innerHTML=html
+                  newTR.setAttribute('class', 'fs-6 text-center')
+                  newTR.setAttribute('tr-index', reply.rno)
+
+                  // 부모 태그에 요소 추가
+                  replyList.appendChild(newTR)
+
+
+                })
+                .catch(err => console.log(err))
+
+
+      })
+
+      // 페이지가 로드되면 리스트를 출력
+      setList()
+
+
+    })
+
+    function setList(){
 
       // 비동기 통신 :댓글 리스트
       axios.get('/reply/'+bno)
@@ -135,13 +193,36 @@
 
                 console.log('response', res.data)
 
+                let list = res.data;
+
+                list.forEach((reply, index) => {
+                  // 새로운 tr을 만들어서 replyIndex 영역에 추가
+
+                  const newTR = document.createElement('tr')
+
+                  let html = '<td class="col-2">'+reply.replyer+'</td>'
+                  html += '<td class="col">'+reply.reply+'</td>'
+                  html += '<td class="col-2">'+reply.replydate+'</td>'
+                  html += '<td class="col-2"> ' +
+                          '<a href="javascript:showEditModal('+reply.rno+')" class="badge bg-warning text-decoration-none">수정</a> ' +
+                          '<a href="javascript:deleteReply('+reply.rno+')" class="badge bg-danger text-decoration-none">삭제</a> ' +
+                          '</td>'
+
+                  newTR.innerHTML=html
+                  newTR.setAttribute('class', 'fs-6 text-center')
+                  newTR.setAttribute('tr-index', reply.rno)
+
+                  // 부모 태그에 요소 추가
+                  replyList.appendChild(newTR)
+
+                })
               })
               .catch(err => {
                 console.log(err)
               })
 
+    }
 
-    })
 
   </script>
 

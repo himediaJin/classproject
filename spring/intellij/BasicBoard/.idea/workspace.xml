@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25064e6a-9d55-4917-9fea-9a4247ce51a2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../boot/SpringBootBoard/photo/5184dc4f-e57c-4639-b38d-adf5ee0cca86photo2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../boot/SpringBootBoard/photo/e56ca9a5-b6c8-48fd-b79b-b6fd4a043ee7photo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/service/BoardDeleteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/service/BoardDeleteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/controller/board/ReplyRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/domain/ReplyDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/mapper/ReplyMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/service/ReplyListService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/resources/templates/board/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/resources/templates/board/view.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/view.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,6 +214,7 @@
       <workItem from="1670285858253" duration="37000" />
       <workItem from="1670382534775" duration="2761000" />
       <workItem from="1670461418905" duration="2453000" />
+      <workItem from="1670544618807" duration="5328000" />
     </task>
     <servers />
   </component>

@@ -203,7 +203,7 @@
         console.log(payload)
 
         // 비동기 통신 : 댓글 등록
-        axios.put('/reply/'+payload.bno, payload)
+        axios.put('/reply/'+payload.rno, payload)
             .then(res => {
                 console.log('res', res.data)
                 const newReply = res.data

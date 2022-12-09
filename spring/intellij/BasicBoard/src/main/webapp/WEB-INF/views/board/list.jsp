@@ -41,7 +41,8 @@
                 <c:forEach items="${page.list}" var="board" varStatus="status">
                 <tr>
                     <th scope="row">${(page.totalCountOfArticle - (page.pageNum-1)*10 ) - status.index}</th>
-                    <td><a href="view?bno=${board.bno}">${board.title}</a> <span class="badge bg-danger">${board.replycnt}</span></td>
+                    <td><a href="view?bno=${board.bno}">${board.title}</a>
+                        <span class="badge bg-danger">${board.replycnt}</span></td>
                     <td>${board.writer}</td>
                     <td>${board.regdate}</td>
                     <td>${board.updatedate}</td>

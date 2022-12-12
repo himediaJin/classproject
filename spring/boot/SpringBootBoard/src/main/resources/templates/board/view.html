@@ -203,7 +203,7 @@
                           '<a href="javascript:deleteReply('+reply.rno+')" class="badge bg-danger text-decoration-none">삭제</a> ' +
                           '</td>'
 
-                  newTR.innerHTML=html
+                  newTR.innerHTML=html  // $().html(html)
                   newTR.setAttribute('class', 'fs-6 text-center')
                   newTR.setAttribute('tr-index', reply.rno)
 

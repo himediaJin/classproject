@@ -14,7 +14,7 @@
         }
     </style>
     
-    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.0.js"></script>
 
     <script>
 
@@ -88,7 +88,7 @@
             }) */
 
             ////////////////////////////////////////
-
+/* 
             // html() -> innerHtml
             // text() -> textContent
 
@@ -101,10 +101,26 @@
             // $('#menu2').text('<h1>div tag</h1>')
 
             // setter 2 => fn
-            $('div').html( (index, oldHtml) => {
-                console.log(index, oldHtml);
-                return '<h1>'+oldHtml+index+'</h1>'
-            } )
+            // $('div').html( (index, oldHtml) => {
+            //     console.log(index, oldHtml);
+            //     return '<h1>'+oldHtml+index+'</h1>'
+            // } )
+
+            $('div').html(function(index, html){
+                console.log(index, html);
+                $(this).html('<h1>'+ html + index + '!!!!! </h1>');
+            }); */
+
+            //////////////////////////////////////////////////////
+
+            $('#btn1').click(function(e){
+                $('#menu1').remove()
+            })
+
+            $('#btn2').click(function(){
+                $('#menu2').empty()
+            })
+
 
         })
 
@@ -112,6 +128,9 @@
     </script>
 </head>
 <body>
+
+    <button id="btn1">메뉴 삭제</button>
+    <button id="btn2">내용 삭제</button>
 
     <div id="menu1">
         <span>Text 1</span>

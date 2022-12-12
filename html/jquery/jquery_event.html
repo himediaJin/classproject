@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1, div {
+            border: 1px solid #000;
+        }
+
+        .reverse {
+            background-color: aqua;
+            color: blue;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-1.12.0.js"></script>
+
+    <script>
+
+        $().ready(function () {
+
+            /* $('h1').on('click', function(e){
+                // this => 이벤트가 발생한 엘리먼트를 가르킨다!
+                $(this).html(function(index, oldHtml){
+                    return oldHtml + '+'
+                })
+            })
+
+            $('h1').on({
+                mouseenter: function(){
+                    $(this).addClass('reverse')
+                },
+                mouseleave: function(){
+                    $(this).removeClass('reverse')
+                }
+            }) */
+
+            $('div').click(function(e){
+
+                let h3 = $('h3', this).text();
+                let p = $('p', this).text();
+
+                console.log(h3, p);
+
+            });
+
+
+
+        })
+
+
+
+    </script>
+</head>
+
+<body>
+
+    <div>
+        <h3>header 1</h3>
+        <p> paragraph1</p> 
+        <input type="hidden" value="1">
+    </div>
+    <div>
+        <h3>header 2</h3>
+        <p> paragraph2</p>
+    </div>
+    <div>
+        <h3>header 3</h3>
+        <p> paragraph3</p>
+    </div>
+
+    <!-- <h1>header-0</h1>
+    <h1>header-1</h1>
+    <h1>header-2</h1> -->
+
+</body>
+
+</html>

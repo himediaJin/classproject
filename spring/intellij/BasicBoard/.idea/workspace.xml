@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25064e6a-9d55-4917-9fea-9a4247ce51a2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/domain/BoardListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/domain/BoardListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/service/BoardListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/service/BoardListService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/resources/templates/board/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/resources/templates/board/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/test/java/com/app/board/MapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/test/java/com/app/board/MapperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +208,7 @@
       <workItem from="1670285858253" duration="37000" />
       <workItem from="1670382534775" duration="2761000" />
       <workItem from="1670461418905" duration="2453000" />
-      <workItem from="1670544618807" duration="17892000" />
+      <workItem from="1670544618807" duration="18792000" />
     </task>
     <servers />
   </component>

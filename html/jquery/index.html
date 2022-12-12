@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+
+    <script>
+        
+        // window.onload = () => {}
+        // $() -> 팩토리 함수 : jquery 객체를 생성해주는 메소드
+        // document -> jquery 객체로 생성
+        // $(document).ready(function(){
+        //     console.log('onload: jquery ready mehod');
+        // })
+
+        // $().ready(() => {
+        //     alert('onload !!!')
+        // })
+
+        //////////////////////////////////////////////////
+
+        $().ready(() => {
+
+            // 선택자를 이용한 문서객체 캐스팅
+            //let h2 = document.querySelector('.bg-black')
+            //$('*')
+            //h2.style.
+
+            // $('*').css('color', 'red').css('background-color', '#eee');
+            // $('.bg-black').css('background-color', '#000')
+            // $('#pick').css('background-color', 'yellow')
+
+            ////////////////////////////////////////////////
+
+            //document.querySelector('input[type=text]').value='안녕!!!'
+            /* $('input[type=text]').val('안녕하세요123!!!');
+
+            let val1 = document.querySelector('input[type=text]').value
+
+            let val2 = $('input:text').val()
+
+            console.log('val1', val1);
+            console.log('val2', val2); */
+
+
+            ////////////////////////////////////////////////
+
+            // 5초 후에 선택된 항목의 값을 확인
+            /* setTimeout(() => {
+
+                let selectVal = $('select > option:selected').val()
+                console.log('selectVal', selectVal);
+
+                let checkVal = $('input:checkbox:checked').val()
+                console.log('checkVal', checkVal)
+
+            },5000) */
+
+            ////////////////////////////////////////////////
+
+            $('table tr:odd').css('background-color', 'green')
+            $('table tr:even').css('background-color', 'yellow')
+            $('table tr:first').css('background-color', 'black').css('color', 'white')
+            $('table tr:last').css('background-color', 'gray').css('color', 'blue')
+
+
+        })
+        
+
+    </script>
+
+</head>
+<body>
+
+
+    <table border="1">
+        <tr>
+            <td>thead 1</td>
+            <td>thead 2</td>
+        </tr>
+        <tr>
+            <td>tbody 1 - 1</td>
+            <td>tbody 1 - 2</td>
+        </tr>
+        <tr>
+            <td>tbody 2 - 1</td>
+            <td>tbody 2 - 2</td>
+        </tr>
+        <tr>
+            <td>tbody 3 - 1</td>
+            <td>tbody 3 - 2</td>
+        </tr>
+        <tr>
+            <td>tbody 4 - 1</td>
+            <td>tbody 4 - 2</td>
+        </tr>
+        <tr>
+            <td>tbody 5 - 1</td>
+            <td>tbody 5 - 2</td>
+        </tr>
+        <tr>
+            <td>footer - 1</td>
+            <td>footer - 2</td>
+        </tr>
+    </table>
+
+
+
+    <!-- <select>
+        <option>2022</option>
+        <option>2021</option>
+        <option>2020</option>
+        <option>2019</option>
+    </select>
+
+    <input type="checkbox"> -->
+
+
+
+    <!-- <input type="text" > -->
+
+    <!-- <h2>header - 01</h2>
+    <h2 class="bg-black">header - 02</h2>
+    <h2 id="pick">header - 03</h2>
+    <h2>header - 04</h2>
+    <h2 class="bg-black">header - 05</h2> -->
+
+    
+</body>
+</html>

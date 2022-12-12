@@ -7,13 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        h1, div {
+        h1, div, a {
             border: 1px solid #000;
+            margin: 10px;
         }
 
         .reverse {
             background-color: aqua;
             color: blue;
+        }
+
+        p {
+            border: 1px solid #000;
+            width: 50%;
+            margin: 10px;
         }
     </style>
 
@@ -85,7 +92,7 @@
                 $('#wrap').append('<h1>'+length+ ' - ' + oldHtml +'</h1>')
             }) */
 
-            $('textarea').keyup(function(){
+            /* $('textarea').keyup(function(){
                 let cnt = $(this).val().length
                 let remain = 150-cnt;
 
@@ -98,9 +105,25 @@
                 }
 
                 $('span').text(cnt)
+            }) */
+
+            $('div').click(function(){
+                console.log(' div event ')
             })
 
+            
+            $('p').click(function(){
+                console.log(' p event ')
 
+                return false
+            })
+
+            
+            $('a').click(function(e){
+                console.log(' a event ')
+                e.preventDefault();
+                return false
+            })
 
         })
 
@@ -111,9 +134,15 @@
 
 <body>
 
+    <div>
+        <p>
+            <a href="#">link</a>
+        </p>
+    </div>
 
-    <textarea cols="50" rows="5"></textarea>
-    <span>0</span>/150
+
+    <!-- <textarea cols="50" rows="5"></textarea>
+    <span>0</span>/150 -->
 
 
 

@@ -5,19 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="278edea4-c0f2-4edf-8381-4b31395821b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/SpringBootBoardApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/domain/BoardDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/java/com/app/board/mapper/BoardMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/test/java/com/app/board/ConnectionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/test/java/com/app/board/SpringBootBoardApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BasicBoard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BasicBoard/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -81,21 +68,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/cheoho-hi/Documents/GitHub/classproject/spring/intellij/Dept/src/main/webapp&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;18b1b63f8c34707921ec5027ed5699f3&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/cheoho-hi/Documents/GitHub/classproject/spring/intellij/Dept",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.general",
+    "spring.configuration.checksum": "18b1b63f8c34707921ec5027ed5699f3"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.app.manager.controller.emp" />
@@ -357,6 +344,8 @@
       <workItem from="1670285871489" duration="135000" />
       <workItem from="1670286028628" duration="7565000" />
       <workItem from="1670372463813" duration="601000" />
+      <workItem from="1670979634236" duration="30000" />
+      <workItem from="1670979709416" duration="276000" />
     </task>
     <servers />
   </component>

@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25064e6a-9d55-4917-9fea-9a4247ce51a2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../boot/FirstBootApp/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/resources/templates/board/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../boot/SpringBootBoard/src/main/resources/templates/board/view.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dept/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Dept/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,6 +212,8 @@
       <workItem from="1670382534775" duration="2761000" />
       <workItem from="1670461418905" duration="2453000" />
       <workItem from="1670544618807" duration="18792000" />
+      <workItem from="1670979599302" duration="7000" />
+      <workItem from="1670993028452" duration="14000" />
     </task>
     <servers />
   </component>

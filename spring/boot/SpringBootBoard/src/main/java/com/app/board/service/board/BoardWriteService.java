@@ -1,4 +1,4 @@
-package com.app.board.service;
+package com.app.board.service.board;
 
 import com.app.board.domain.BoardDTO;
 import com.app.board.domain.BoardWriteRequest;

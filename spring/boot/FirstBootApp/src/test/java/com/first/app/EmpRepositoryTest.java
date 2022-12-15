@@ -1,5 +1,6 @@
 package com.first.app;
 
+import com.first.app.domain.ListItemDTO;
 import com.first.app.entity.Dept;
 import com.first.app.entity.Emp;
 import com.first.app.entity.EmpRepository;
@@ -13,6 +14,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 
 import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.List;
 
 @SpringBootTest
@@ -86,6 +88,38 @@ public class EmpRepositoryTest {
         Page<Emp> page = empRepository.findEmpWithDept(PageRequest.of(3, 5));
         for (Emp emp : page.getContent()){
             log.info(emp);
+        }
+
+    }
+
+
+    @Test
+    public void deptwithCntTest(){
+
+        Page<Object[]> result = empRepository.listWithCnt(PageRequest.of(0,3));
+
+        log.info("###########################################");
+        log.info("result >>>>> 조회항목 리스트  " + result.getContent());
+        log.info("result >>>>> 전체 게시물의 개수  " + result.getTotalElements());
+        log.info("result >>>>> 전체 페이지의 개수  " + result.getTotalPages());
+        log.info("result >>>>> 현재 요청 페이지 번호  " + result.getNumber());
+        log.info("result >>>>> 페이지당 표현할 항목의 개수  " + result.getSize());
+        log.info("result >>>>> 현재 페이지에 출력된 항목의 개수  " + result.getNumberOfElements());
+
+        for(Object[] arr : result.getContent()){
+            log.info(Arrays.toString(arr));
+        }
+
+    }
+
+
+    @Test
+    public void dtoListTest(){
+
+        List<ListItemDTO> list = empRepository.fintListItem();
+
+        for (ListItemDTO itemDTO : list){
+            log.info(itemDTO);
         }
 
     }

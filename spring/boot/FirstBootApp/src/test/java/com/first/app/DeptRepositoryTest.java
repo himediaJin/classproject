@@ -41,6 +41,7 @@ public class DeptRepositoryTest {
 
         // 검색
         Optional<Dept> dept1 = deptRepository.findById(10);
+
         Dept deptData = dept1.orElse(null);
 
         log.info(" Dept >>>>>  " + deptData);
@@ -82,6 +83,44 @@ public class DeptRepositoryTest {
         // 개수
         long cnt = deptRepository.count();
         log.info("전체 부서의 수 >>>>>    " + cnt);
+
+    }
+
+    @Test
+    public void JpqlMethodTest(){
+
+        Dept dept1 = deptRepository.findByDeptno(30);
+
+        log.info(" >>>>>>>>>>>>>>   " + dept1);
+
+
+        log.info("#################### ########################");
+
+        List<Dept> list1 = deptRepository.findByDnameLikeOrderByLocAsc("%A%");
+
+        for(Dept dept : list1){
+            log.info(dept);
+        }
+
+
+        log.info("#################### ########################");
+
+        List<Dept> list2 = deptRepository.findByLocLike("%A%");
+
+        for(Dept dept : list2){
+            log.info(dept);
+        }
+
+
+        log.info("#################### ########################");
+
+        List<Dept> list3 = deptRepository.findByDeptnoBetween(100, 300);
+
+        for(Dept dept : list3){
+            log.info(dept);
+        }
+
+
 
     }
 

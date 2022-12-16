@@ -30,7 +30,7 @@ public class BoardEditRequest {
                 .build();
     }
 
-    public Board toBoardEntiy(){
+    public Board toBoardEntity(){
         return Board.builder()
                 .bno(bno)
                 .writer(writer)
@@ -39,5 +39,7 @@ public class BoardEditRequest {
                 .photo(oldFile)
                 .build();
     }
+
+
 
 }

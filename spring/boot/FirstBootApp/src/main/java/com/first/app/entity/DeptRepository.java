@@ -13,7 +13,7 @@ public interface DeptRepository extends JpaRepository<Dept, Integer> {
 
     List<Dept> findByDeptnoGreaterThanAndDnameLikeAndLocLikeOrderByDeptnoDesc(Integer deptno, String dname, String loc);
 
-    @Query("select d from Dept d where d.loc like :loc")
+    @Query(value = "select d from Dept d where d.loc like :loc")
     List<Dept> findByLocLike(@Param("loc") String loc);
 
     @Query("select d from Dept d where d.deptno between :startNum and :endNum")

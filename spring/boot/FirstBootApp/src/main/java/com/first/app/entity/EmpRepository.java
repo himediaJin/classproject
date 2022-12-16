@@ -4,11 +4,19 @@ import com.first.app.domain.ListItemDTO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 public interface EmpRepository extends JpaRepository<Emp, Integer> {
+    long deleteByEmpno(Integer empno);
+
+    @Transactional
+    @Modifying
+    @Query("delete from Emp e where e.empno = :empno1 and e.empno > :empno2")
+    int deleteByEmpnoAndEmpnoGreaterThan(Integer empno, Integer empno1);
 
     @Query(value = "select e from Emp e join fetch e.dept")
     List<Emp> findEmpDept();

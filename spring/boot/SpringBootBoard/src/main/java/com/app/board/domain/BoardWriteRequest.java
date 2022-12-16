@@ -26,7 +26,6 @@ public class BoardWriteRequest {
                 .build();
     }
 
-
     public Board toBoardEntity(){
         return Board.builder()
                 .title(title)
@@ -34,5 +33,6 @@ public class BoardWriteRequest {
                 .writer(writer)
                 .build();
     }
+
 
 }

@@ -1,17 +1,16 @@
 package com.app.board;
 
+import com.app.board.domain.BoardEditRequest;
 import com.app.board.domain.BoardWriteRequest;
 import com.app.board.entity.Board;
-import com.app.board.entity.BoardRepository;
+import com.app.board.repository.BoardRepository;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Sort;
-
 import org.springframework.data.domain.PageRequest;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.data.domain.Sort;
 
 import java.time.LocalDate;
 import java.util.Optional;
@@ -23,63 +22,80 @@ public class BoardRepositoryTest {
     @Autowired
     private BoardRepository boardRepository;
 
-
     @Test
     public void saveTest(){
 
+        /*
+        BoardWriteRequest -> Entity -> save()
+        */
+
         BoardWriteRequest writeRequest = BoardWriteRequest.builder()
-                .title("JPA 테스트")
-                .content("JPA 테스트 내용 입력")
-                .writer("테스터")
+                .title("12월 16일 JPA 테스트 작성")
+                .writer("JPA")
+                .content("테스트 실행!")
                 .build();
 
         Board board = writeRequest.toBoardEntity();
 
-        log.info(boardRepository.save(board));
+        log.info("insert 전 : " + board);
 
+        log.info("insert 후 : " + boardRepository.save(board)   );
 
     }
 
     @Test
     public void findIdTest(){
-        Optional<Board> board = boardRepository.findById(115);
-        log.info(board.orElse(null));
+
+        // view 페이지 , edit form
+        Optional<Board> result = boardRepository.findById(128);
+
+        Board board = result.get();
+
+        log.info("128번 게시물  >>>>> " + board);
+
     }
+
 
     @Test
     public void editTest(){
 
-        Optional<Board> result = boardRepository.findById(115);
+        BoardEditRequest editRequest = BoardEditRequest.builder()
+                .bno(128)
+                .title("12월 16일에 변경")
+                .content("내용 수정")
+                .build();
 
-        Board board = result.orElse(null);
-
-        log.info(board);
-
-        // 변경할 데이터 생성
-        board.setTitle("JPA 에서 수정");
-        board.setContent("수정한 내용");
+        // requet => entity
+        Board board = editRequest.toBoardEntity();
         board.setUpdatedate(LocalDate.now());
 
-        Board editResult = boardRepository.save(board);
+        log.info("수정 전 데이터 >>>>> " + board);
 
-        log.info(editResult);
+        Board editBoard = boardRepository.save(board);
 
+        log.info("수정 후 데이터 >>>>> " + editBoard);
+
+    }
+
+
+    @Test
+    public void deleteTest(){
+        int result = boardRepository.deleteByBno(129);
+        log.info(">>>>>  결과 >>>>>> " + result);
     }
 
     @Test
-    @Transactional // JPA는 transaction을 기반으로 작동 delete 시 transaction을 찾지 못해 에러 발생 발생 -> @Transactional 추가 필요
-    public void deleteByIdTest(){
-        long result = boardRepository.deleteByBno(111);
-        log.info(">>>>>> 삭제 결과 >>>>>>> " + result);
+    public void listTest(){
+        // 페이징 -> 구간 select, 한 페이지에 10개씩 게시물이 출력
+        Page<Board> page = boardRepository.findAll(PageRequest.of(0, 10, Sort.by("bno").descending()));
+
+        // 전체 페이지 개수
+        long totalCnt = page.getTotalElements();
+        log.info(">>>>>>> 전체 게시물의 개수  ::::: " + totalCnt);
+        // 게시물 리스트
+        for (Board board : page.getContent()){
+            log.info(board);
+        }
     }
-
-    @Test
-    public void FindAllTest(){
-
-        Page<Board> page = boardRepository.findAll(PageRequest.of(0,10, Sort.by("bno").descending()));
-
-        log.info(">>>>>> 결과 >>>>>>> ");
-    }
-
 
 }

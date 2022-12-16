@@ -18,6 +18,7 @@ public class Board {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private Integer bno;
 
     @Column
@@ -26,16 +27,16 @@ public class Board {
     @Column
     private String content;
 
-    @Column
+    @Column(updatable = false)
     private String writer;
 
     @Column
     private String photo;
 
-    @Column(insertable=false, updatable=false)
+    @Column(insertable = false, updatable = false)
     private LocalDate regdate;
 
-    @Column(insertable=false)
+    @Column(insertable = false)
     private LocalDate updatedate;
 
 

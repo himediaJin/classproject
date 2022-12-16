@@ -4,6 +4,7 @@ package com.app.board.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "tbl_reply")
@@ -28,10 +29,10 @@ public class Reply {
     @Column
     private String replyer;
 
-    @Column(insertable = false)
-    private String replydate;
+    @Column
+    private LocalDate replydate;
 
-    @Column(insertable = false)
-    private String updatedate;
+    @Column
+    private LocalDate updatedate;
 
 }

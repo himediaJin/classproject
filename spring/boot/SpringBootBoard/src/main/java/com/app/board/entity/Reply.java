@@ -26,8 +26,12 @@ public class Reply {
     @Column
     private String reply;
 
-    @Column
-    private String replyer;
+    /*@Column
+    private String replyer;*/
+
+    @ManyToOne
+    @JoinColumn(name = "replyer")
+    private BoardMember replyer;
 
     @Column
     private LocalDate replydate;

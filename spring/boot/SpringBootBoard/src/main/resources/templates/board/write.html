@@ -27,7 +27,7 @@
         <div class="mb-3">
           <label for="writer" class="form-label">작성자</label>
           <input type="text" class="form-control" th:value="${#authentication.principal.boardMember.username}" readonly>
-          <input type="text" class="form-control" id="writer" name="writer" th:value="${#authentication.principal.boardMember.idx}" >
+          <input type="hidden" id="writer" name="writer" th:value="${#authentication.principal.boardMember.idx}" >
         </div>
         <div class="mb-3">
           <label for="content" class="form-label">내용</label>

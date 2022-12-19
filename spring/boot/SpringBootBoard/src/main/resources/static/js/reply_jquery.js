@@ -34,12 +34,12 @@ function setList(){
 
             // 새로운 tr을 만들어서 replyList 영역에 추가
             let html = `
-                    <td class="col-2">${reply.replyer}</td>
+                    <td class="col-2">${reply.replyer.username}</td>
                         <td class="col">${reply.reply}</td>
                         <td class="col-2">${reply.replydate}</td>
                         <td class="col-2">
-                            <a href="javascript:" class="badge bg-warning text-decoration-none edit">수정</a>
-                            <a href="javascript:" class="badge bg-danger text-decoration-none del">삭제</a>
+                            <a href="javascript:" replyer-idx="${reply.replyer.idx}" class="badge bg-warning text-decoration-none edit">수정</a>
+                            <a href="javascript:" replyer-idx="${reply.replyer.idx}" class="badge bg-danger text-decoration-none del">삭제</a>
                     </td>`
             /*'<a href="javascript:showEditModal('+reply.rno+')" class="badge bg-warning text-decoration-none edit">수정</a> ' +
             '<a href="javascript:deleteReply('+reply.rno+')" class="badge bg-danger text-decoration-none del">삭제</a> ' +*/
@@ -74,12 +74,12 @@ function insertReply(){
             const reply = data
 
             let html = `
-                    <td class="col-2">${reply.replyer}</td>
+                    <td class="col-2">${reply.replyer.username}</td>
                         <td class="col">${reply.reply}</td>
                         <td class="col-2">${reply.replydate}</td>
                         <td class="col-2">
-                            <a href="javascript:" class="badge bg-warning text-decoration-none edit">수정</a>
-                            <a href="javascript:" class="badge bg-danger text-decoration-none del">삭제</a>
+                            <a href="javascript:" replyer-idx="${reply.replyer.idx}" class="badge bg-warning text-decoration-none edit">수정</a>
+                            <a href="javascript:" replyer-idx="${reply.replyer.idx}" class="badge bg-danger text-decoration-none del">삭제</a>
                     </td>`
             /*'<a href="javascript:showEditModal('+reply.rno+')" class="badge bg-warning text-decoration-none edit">수정</a> ' +
             '<a href="javascript:deleteReply('+reply.rno+')" class="badge bg-danger text-decoration-none del">삭제</a> ' +*/
@@ -107,6 +107,11 @@ function deleteReply(e){
 
     // a 기본 기능 제거
     e.preventDefault()
+
+    if(midx != $(this).attr('replyer-idx')){
+        alert('작성자만 수정 또는 삭제가 가능합니다.')
+        return false;
+    }
 
     if(!confirm('삭제하시겠습니까?')){
         return;
@@ -148,6 +153,11 @@ function showEditModal(e){
     // a 기본 기능 제거
     e.preventDefault()
 
+    if(midx != $(this).attr('replyer-idx')){
+        alert('작성자만 수정 또는 삭제가 가능합니다.')
+        return false;
+    }
+
     editModal.show()
 
     //const editTD = document.querySelectorAll('tr[tr-index="'+rno+'"]>td')
@@ -163,7 +173,10 @@ function showEditModal(e){
 
 
     $('#erno').val(rno)
-    $('#ereplyer').val($(editTD).eq(0).text())
+    $('#ereplyerName').val($(editTD).eq(0).text())
+
+    $('#ereplyer').val($(this).attr("replyer-idx"))
+
     $('#ereply').val($(editTD).eq(1).text())
     $('#ereplydate').val($(editTD).eq(2).text())
 

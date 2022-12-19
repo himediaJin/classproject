@@ -29,7 +29,7 @@ public class BoardRepositoryTest {
         BoardWriteRequest -> Entity -> save()
         */
 
-        BoardWriteRequest writeRequest = BoardWriteRequest.builder()
+        /*BoardWriteRequest writeRequest = BoardWriteRequest.builder()
                 .title("12월 16일 JPA 테스트 작성")
                 .writer("JPA")
                 .content("테스트 실행!")
@@ -39,7 +39,7 @@ public class BoardRepositoryTest {
 
         log.info("insert 전 : " + board);
 
-        log.info("insert 후 : " + boardRepository.save(board)   );
+        log.info("insert 후 : " + boardRepository.save(board)   );*/
 
     }
 

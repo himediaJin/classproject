@@ -91,7 +91,7 @@ function insertReply(){
             $('#replyList').append(newTR)
 
             $("#reply").val('')
-            $("#replyer").val('')
+            //$("#replyer").val('')
         },
         error : function (request, httpStatus, error) {
             console.log(request)

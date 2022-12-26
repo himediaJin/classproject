@@ -39,7 +39,7 @@ public class CustomSecurityConfig {
         http.rememberMe()
                 .key("123456789")
                 .rememberMeParameter("remember-me")
-                .tokenValiditySeconds(60*60*60*24*7);
+                .tokenValiditySeconds(60*60*24*7);
 
         return http.build();
 

@@ -36,13 +36,14 @@ public class ReplyRestController {
 
     // get  /reply/{bno} => list
     @GetMapping(value = "/{bno}",produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<Reply>> selectList(
+    public List<Reply> selectList(
             @PathVariable("bno") int bno
     ){
 
         List<Reply> list = replyListService.selectAll(bno);
 
-        return new ResponseEntity<>(list, HttpStatus.OK);
+        //return new ResponseEntity<>(list, HttpStatus.OK);
+        return list;
 
     }
 

@@ -23,10 +23,13 @@
           <tr>
             <th class="col-1">번호</th>
             <th class="col">제목</th>
+
             <th class="col-2">작성자</th>
             <th class="col-2">등록일</th>
           </tr>
         </thead>
+
+
 
         <tbody>
           <tr th:each="board : ${listPage.list}">
@@ -43,6 +46,7 @@
       </table>
 
       <!--페이징 시작-->
+      <th:block th:if="${listPage.endNum>0}">
       <nav aria-label="">
         <ul class="pagination">
 
@@ -77,6 +81,7 @@
 
         </ul>
       </nav>
+      </th:block>
 
       <!--글쓰기 버튼-->
       <div class="text-end">

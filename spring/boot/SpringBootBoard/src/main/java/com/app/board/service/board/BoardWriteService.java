@@ -5,6 +5,7 @@ import com.app.board.domain.BoardWriteRequest;
 import com.app.board.entity.Board;
 import com.app.board.mapper.BoardMapper;
 import com.app.board.repository.BoardRepository;
+import com.app.board.util.FileSaveUtil;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,6 +14,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Map;
 import java.util.UUID;
 
 @Service
@@ -25,11 +27,14 @@ public class BoardWriteService {
     @Autowired
     private BoardRepository boardRepository;
 
+    @Autowired
+    private FileSaveUtil fileSaveUtil;
+
     public int write(BoardWriteRequest boardWriteRequest){
 
         MultipartFile file = boardWriteRequest.getFormFile();
 
-        File saveDir = null;
+        /*File saveDir = null;
         String newFileName = null;
 
 
@@ -60,7 +65,14 @@ public class BoardWriteService {
                 throw new RuntimeException(e);
             }
 
-        }
+        }*/
+
+        Map<String, Object> saveResult =  fileSaveUtil.saveFile(file);
+
+        String newFileName = (String) saveResult.get("newFileName");
+        File saveDir = (File) saveResult.get("saveDir");
+        
+
 
 
         // request -> Entity

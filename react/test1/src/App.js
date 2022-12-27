@@ -2,11 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 import Comment from './components/Comment';
 import Notification from './components/Notification';
+import Counter from './components/Counter';
 
 
 function App() {
   return (
-    <Notification message="안녕하세요" />    
+    <Counter />    
   );
 }
 

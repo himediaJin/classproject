@@ -5,11 +5,16 @@ import Notification from './components/Notification';
 import Counter from './components/Counter';
 import TextInputButton from './components/TextInputButton';
 import Accommodate from './components/Acommodate';
+import Toggle from './components/Toggle';
+import MyButton from './components/MyButton';
+import ConfirmButton from './components/ConfirmBUtton';
+import Greeting from './components/Greeting';
+import LoginControl from './components/LoginControl';
 
 
 function App() {
   return (
-    <Accommodate />    
+    <LoginControl />    
   );
 }
 

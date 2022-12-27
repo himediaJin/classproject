@@ -15,11 +15,17 @@ function Greeting(props){
 
     const isLogin = props.isLogin
     
-    if(isLogin){
+    /* if(isLogin){
         return <UserGreeting/>
     }
 
-    return <GuestGreeting/>
+    return <GuestGreeting/> */
+
+    return (
+        <div>
+            { isLogin ? <UserGreeting/> : <GuestGreeting/>}
+        </div>
+    )
 
 }
 

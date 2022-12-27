@@ -10,11 +10,15 @@ import MyButton from './components/MyButton';
 import ConfirmButton from './components/ConfirmBUtton';
 import Greeting from './components/Greeting';
 import LoginControl from './components/LoginControl';
+import MailBox from './components/MailBox';
+import UserStatus from './components/UserStatus';
+import WarningBanner from './components/WarnningBanner';
+import MainPage from './components/Mainpage';
 
 
 function App() {
   return (
-    <LoginControl />    
+    <MainPage />    
   );
 }
 

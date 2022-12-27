@@ -3,11 +3,13 @@ import './App.css';
 import Comment from './components/Comment';
 import Notification from './components/Notification';
 import Counter from './components/Counter';
+import TextInputButton from './components/TextInputButton';
+import Accommodate from './components/Acommodate';
 
 
 function App() {
   return (
-    <Counter />    
+    <Accommodate />    
   );
 }
 

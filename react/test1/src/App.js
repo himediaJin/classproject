@@ -14,11 +14,14 @@ import MailBox from './components/MailBox';
 import UserStatus from './components/UserStatus';
 import WarningBanner from './components/WarnningBanner';
 import MainPage from './components/Mainpage';
+import NumberList from './components/NumberList';
+import TeamPlayers from './components/TeamPlayers';
+import NameForm from './components/NameForm';
 
 
 function App() {
   return (
-    <MainPage />    
+    <NameForm />    
   );
 }
 

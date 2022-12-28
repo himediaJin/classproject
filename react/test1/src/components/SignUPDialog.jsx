@@ -21,12 +21,12 @@ function SignUpDialog(props){
                 onChange={(event) => {
                     setNickName(event.target.value)
                 }} />
-                <button onClick={handleClick}> 참여하기 </button>
-                <div>
-                    {room.map((name, index) => {
-                        return <p key={index}> {name} </p>
-                    })}
-                </div>
+            <button onClick={handleClick}> 참여하기 </button>
+            <div>
+                {room.map((name, index) => {
+                    return <p key={index}> {name} </p>
+                })}
+            </div>
         </Dialog>
     )
 

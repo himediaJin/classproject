@@ -24,11 +24,13 @@ import SignUp from './components/SignUp';
 import WelcomeMessage from './components/WelcomeMessage';
 import WelcomeDialog from './components/WelcomeDialog';
 import SignUpDialog from './components/SignUPDialog';
+import ProfileCard from './components/ProfileCard';
+import DarkOrWhite from './components/DarkOrWhite';
 
 
 function App() {
   return (
-    <SignUpDialog />    
+    <DarkOrWhite />    
   );
 }
 

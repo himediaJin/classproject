@@ -17,11 +17,15 @@ import MainPage from './components/Mainpage';
 import NumberList from './components/NumberList';
 import TeamPlayers from './components/TeamPlayers';
 import NameForm from './components/NameForm';
+import RequestForm from './components/RequestForm';
+import FruitSelect from './components/FruitSelect';
+import Reservation from './components/Reservation';
+import SignUp from './components/SignUp';
 
 
 function App() {
   return (
-    <NameForm />    
+    <SignUp />    
   );
 }
 

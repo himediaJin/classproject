@@ -21,11 +21,14 @@ import RequestForm from './components/RequestForm';
 import FruitSelect from './components/FruitSelect';
 import Reservation from './components/Reservation';
 import SignUp from './components/SignUp';
+import WelcomeMessage from './components/WelcomeMessage';
+import WelcomeDialog from './components/WelcomeDialog';
+import SignUpDialog from './components/SignUPDialog';
 
 
 function App() {
   return (
-    <SignUp />    
+    <SignUpDialog />    
   );
 }
 

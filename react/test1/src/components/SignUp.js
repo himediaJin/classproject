@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 function SignUp(props){
 
-    const [userName, setUserName] = useState('손흥민')
-    const [gender, setGender] = useState('남자')
+    const [userName, setUserName] = useState('')
+    const [gender, setGender] = useState('')
 
     return (
         <form onSubmit={(event) => {

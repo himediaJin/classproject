@@ -12,4 +12,10 @@ code {
     monospace;
 }
 
+.border-blue{
+  border: 3px solid blue;
+}
 
+.border-red{
+  border: 3px solid red;
+}

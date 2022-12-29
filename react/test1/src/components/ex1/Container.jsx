@@ -16,6 +16,15 @@ const menus = [
     {mno: 4, name: '홍차', price: 5000},
 ]
 
+const style = {
+    wrapper: {
+        padding:20,
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-around"
+    }
+}
+
 function Container(props){
 
     // 선택한(클릭) 메뉴를 속성으로 저장 => Detail 로 데이터 전달
@@ -30,7 +39,7 @@ function Container(props){
     }
 
     return (
-        <div>
+        <div style={style.wrapper}>
             <Displays arr={menus} changeMenu={changeMenu}/>
             <Details menu={selectedMenu}/>
         </div>

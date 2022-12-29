@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // 단어를 상태로 관리하는 배열에 추가하는 함수를 받아서 처리
 function WordInput({addWord}){
@@ -22,3 +22,5 @@ function WordInput({addWord}){
 
 
 }
+
+export default WordInput

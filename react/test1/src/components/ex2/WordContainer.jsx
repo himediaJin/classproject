@@ -1,5 +1,18 @@
 import React from "react";
 import { useState } from "react";
+import WordInput from "./WordInput";
+import WordList from "./WordList";
+
+
+const style = {
+    wrapper: {
+        padding:20,
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-around"
+    }
+}
+
 
 function WordContainer(props){
 
@@ -20,6 +33,13 @@ function WordContainer(props){
         const filteredWords = words.filter( w => w !== word )
         setWords([...filteredWords])
     }
+
+    return (
+        <div style={style.wrapper}>
+            <WordInput addWord={addWord}/>
+            <WordList words={words} removeWord={removeWord}/>
+        </div>
+    )
 
 }
 

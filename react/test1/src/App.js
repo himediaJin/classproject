@@ -27,11 +27,12 @@ import SignUpDialog from './components/SignUPDialog';
 import ProfileCard from './components/ProfileCard';
 import DarkOrWhite from './components/DarkOrWhite';
 import Container from './components/ex1/Container';
+import WordContainer from './components/ex2/WordContainer';
 
 
 function App() {
   return (
-    <Container />    
+    <WordContainer />    
   );
 }
 

@@ -26,11 +26,12 @@ import WelcomeDialog from './components/WelcomeDialog';
 import SignUpDialog from './components/SignUPDialog';
 import ProfileCard from './components/ProfileCard';
 import DarkOrWhite from './components/DarkOrWhite';
+import Container from './components/ex1/Container';
 
 
 function App() {
   return (
-    <DarkOrWhite />    
+    <Container />    
   );
 }
 

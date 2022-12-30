@@ -58,7 +58,7 @@ function MainPage(props) {
 
             { blockItems.map( (item, index) => {
                 return (
-                    <Block
+                    <Block key={index}
                         padding={item.padding}
                         bColor={item.backColor}
                     >
@@ -72,4 +72,4 @@ function MainPage(props) {
     );
 }
 
-export default MainPage;
+//export default MainPage;

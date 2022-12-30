@@ -8,6 +8,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     align-items: flext-start;
     justify-content: center;
+    margin-bottom: 10px;
     
     & > * {
         :not(:last-child) {

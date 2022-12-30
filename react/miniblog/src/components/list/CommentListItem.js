@@ -22,7 +22,7 @@ const TitleText = styled.p`
 function CommentListItem({comment}) {
     return (
         <Wrapper>
-            <TitleText>{comment.title}</TitleText>
+            <TitleText>{comment.content}</TitleText>
         </Wrapper>
     );
 }

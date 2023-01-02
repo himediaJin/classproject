@@ -2,8 +2,9 @@ import React, {useState} from 'react';
 import Typography from "@mui/material/Typography";
 import {Button, TextField} from "@mui/material";
 import Box from "@mui/material/Box";
+import {postTodo} from "../../apis/todoAPI";
 
-function TodoRegisterComponent(props) {
+function TodoRegisterComponent({setResult}) {
 
     const [todo, setTodo] = useState({title:'', writer:'', complete:false})
 
@@ -15,6 +16,13 @@ function TodoRegisterComponent(props) {
         todo[attr] = value;
         //console.log(todo)
         setTodo({...todo})
+    }
+
+    const clickRegister =  async  () => {
+        const result = await postTodo(todo)
+        console.log(result)
+
+        setResult(result)
     }
 
     return (
@@ -41,7 +49,7 @@ function TodoRegisterComponent(props) {
         </Box>
 
         <Box sx={{p:1}} display={"flex"} justifyContent={"right"} >
-            <Button variant={"contained"}>등록</Button>
+            <Button variant={"contained"} onClick={clickRegister}>등록</Button>
         </Box>
 
     </>

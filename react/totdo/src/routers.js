@@ -29,11 +29,11 @@ const routers = createBrowserRouter([
             {  //       /todo
                 path: "",
                 element: <Navigate to={"/todo/list"} replace={true}></Navigate>
-            },
+            }/*,
             {
                 path: "read/:id",
                 element: <TodoReadPage></TodoReadPage>
-            }
+            }*/
         ]
     }
 

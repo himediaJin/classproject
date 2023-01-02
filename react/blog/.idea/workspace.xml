@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f35bd4d6-a551-4bac-8762-5a101e2d4e4c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../totdo/src/components/todo/TodoRegisterComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../totdo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../totdo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../totdo/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../totdo/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../totdo/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../totdo/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../totdo/src/pages/todo/TodoListPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../totdo/src/pages/todo/TodoListPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../totdo/src/pages/todo/TodoRegisterPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../totdo/src/pages/todo/TodoRegisterPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

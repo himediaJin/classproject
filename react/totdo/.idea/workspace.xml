@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c83551c6-a10b-45f5-a968-be0332418461" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/todo/TodoRegisterComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../blog/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../blog/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/todo/TodoListPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/todo/TodoListPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/todo/TodoRegisterPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/todo/TodoRegisterPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

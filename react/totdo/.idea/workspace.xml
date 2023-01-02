@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c83551c6-a10b-45f5-a968-be0332418461" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/todo/TodoListComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/todo/TodoReadComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/todo/TodoModifyComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../blog/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../blog/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/apis/todoAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/apis/todoAPI.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/todo/TodoListPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/todo/TodoListPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todo/TodoReadComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo/TodoReadComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/todo/TodoReadPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/todo/TodoReadPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routers.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

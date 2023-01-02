@@ -17,3 +17,13 @@ export const getTodo = async (id) => {
     const res = await axios.get(`http://localhost/todos/${id}`)
     return res.data
 }
+
+export const deleteTodo = async (id) => {
+    const res = await axios.delete(`http://localhost/todos/${id}`)
+    return res.data
+}
+
+export const putTodo = async (todo) => {
+    const res = await axios.put(`http://localhost/todos/${todo.id}`, todo)
+    return res.data
+}

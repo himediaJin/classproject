@@ -1,38 +1,46 @@
 import React, {useEffect, useState} from 'react';
-import {deleteTodo, getTodo} from "../../apis/todoAPI";
-import {useNavigate} from "react-router-dom";
+import {getTodo, putTodo} from "../../apis/todoAPI";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import {Button, Checkbox, FormControlLabel, Stack, TextField} from "@mui/material";
 
-function TodoReadComponent({id, moveToList, setResult, moveToModify}) {
+function TodoModifyComponent({id, setResult, moveToList, moveToBack}) {
 
-    const navigate = useNavigate()
-    const [todo, setTodo] = useState({});
+    const [todo, setTodo] = useState({})
 
     useEffect(() => {
+
+        console.log("id >>>>>>>>>>>>>", id)
+
         getTodo(id).then(result => {
             setTodo(result)
         })
-    })
+    },[])
 
-    // 삭제 처리 함수
-    const clickDelete = async () => {
-        const result = deleteTodo(id)
-        setResult('삭제되었습니다.')
+    const changeTodo = (e) => {
+        todo[e.target.name] = e.target.value
+        setTodo({...todo})
     }
 
+    const changeTodoCoplete = (e) => {
+        todo['complete'] = e.target.checked
+        setTodo({...todo})
+    }
+
+    const  clickModify = async () => {
+        const result = await putTodo(todo)
+        setResult('수정되었습니다.')
+    }
 
     return (
         <>
-            <Typography variant={'h4'} sx={{p:3}}>Todo Read Page</Typography>
+            <Typography variant={'h4'} sx={{p:3}}>Todo Modify Page</Typography>
             <Box sx={{p:1}}>
                 <TextField
                     variant="outlined"
                     fullWidth
                     name={'id'}
                     label={'ID'}
-                    aria-readonly={true}
                     value={String(todo.id)}
                 ></TextField>
             </Box>
@@ -42,8 +50,8 @@ function TodoReadComponent({id, moveToList, setResult, moveToModify}) {
                     fullWidth
                     name={'title'}
                     label={'title'}
-                    aria-readonly={true}
                     value={String(todo.title)}
+                    onChange={(e) => changeTodo(e)}
                 ></TextField>
             </Box>
             <Box sx={{p:1}}>
@@ -52,22 +60,23 @@ function TodoReadComponent({id, moveToList, setResult, moveToModify}) {
                     fullWidth
                     name="writer"
                     label="writer"
-                    aria-readonly={true}
                     value={String(todo.writer)}
+                    onChange={(e) => changeTodo(e)}
                 ></TextField>
             </Box>
 
             <Box sx={{p:1}}>
                 <FormControlLabel
                     control={<Checkbox checked={Boolean(todo.complete)} />}
+                    onChange={(e) => changeTodoCoplete(e)}
                     label='Complete' />
             </Box>
 
             <Box sx={{p:1}} display={"flex"} justifyContent={"right"} >
                 <Stack spacing={2} direction="row">
-                    <Button variant={"contained"} onClick={() => moveToModify()}>수정</Button>
-                    <Button variant={"contained"} onClick={clickDelete}>삭제</Button>
-                    <Button variant={"contained"} onClick={moveToList}>LIST</Button>
+                    <Button variant={"contained"} onClick={() => clickModify()}>수정</Button>
+                    <Button variant={"contained"} onClick={() => moveToBack()}>취소(이전)</Button>
+                    <Button variant={"contained"} onClick={() => moveToList()}>LIST</Button>
                 </Stack>
             </Box>
 
@@ -75,4 +84,4 @@ function TodoReadComponent({id, moveToList, setResult, moveToModify}) {
     );
 }
 
-export default TodoReadComponent;
+export default TodoModifyComponent;
